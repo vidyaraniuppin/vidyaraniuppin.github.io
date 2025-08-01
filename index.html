@@ -1,172 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vidyarani Ishwar Uppin | Senior Java Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Vidyarani Uppin - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
+    body {
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-    }
-
-    body {
-      background: #f9f9f9;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
       color: #333;
-      line-height: 1.6;
     }
-
     header {
-      background: #007bff;
+      background-color: #6a11cb;
+      background-image: linear-gradient(315deg, #6a11cb 0%, #2575fc 74%);
       color: white;
-      padding: 2rem 1rem;
       text-align: center;
+      padding: 2rem 1rem;
     }
-
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin: 1rem 0 0.5rem;
     }
-
     header p {
-      font-size: 1.2rem;
+      margin: 0.2rem;
+      font-size: 1rem;
     }
-
-    .container {
-      max-width: 1000px;
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
       margin: auto;
-      padding: 2rem;
     }
-
-    .section {
-      margin-top: 3rem;
+    h2 {
+      color: #2575fc;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
     }
-
-    .section h2 {
-      color: #007bff;
-      border-bottom: 2px solid #007bff;
-      display: inline-block;
-      margin-bottom: 1rem;
+    .skills, .projects, .experience, .education {
+      margin-top: 1.5rem;
     }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      margin-bottom: 1rem;
+    ul {
+      padding-left: 1.2rem;
     }
-
-    .skills span {
-      display: inline-block;
-      background: #007bff;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      margin: 0.3rem;
-      font-size: 0.9rem;
-    }
-
     .contact a {
-      color: #007bff;
+      color: #2575fc;
       text-decoration: none;
-      margin: 0 0.5rem;
     }
-
     footer {
-      background: #007bff;
-      color: white;
+      background-color: #f1f1f1;
       text-align: center;
       padding: 1rem;
-      margin-top: 4rem;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .card, .container {
-        padding: 1rem;
-      }
+      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
   <header>
+    <img src="images/profile.jpg" alt="Vidyarani Uppin" class="rounded-full w-40 h-40 object-cover mx-auto shadow-lg border-4 border-white">
     <h1>Vidyarani Ishwar Uppin</h1>
     <p>Senior Java Developer | AWS Certified | Full Stack Engineer</p>
-    <p>
-      📩 <a href="mailto:vidyaraniuppin1992@gmail.com" style="color:white;">vidyaraniuppin1992@gmail.com</a> |
-      ☎ 508.314.6175 |
-      <a href="https://www.linkedin.com/in/vidyaraniishwaruppin/" target="_blank" style="color:white;">LinkedIn</a>
-    </p>
+    <p>📧 vidyaraniuppin1992@gmail.com | 📱 508.314.6175</p>
   </header>
 
-  <div class="container">
-    <div class="section">
-      <h2>Professional Summary</h2>
-      <div class="card">
-        <p>Senior Java Developer with 7+ years of experience in designing, developing, and deploying scalable, cloud-native applications. Proven expertise in building robust RESTful APIs and microservices using Java 8+, Spring Boot, Hibernate, and Apache Kafka. Experienced in CI/CD with Jenkins, GitHub Actions, Docker, and Kubernetes. Skilled in AWS services (EC2, S3, RDS, IAM, DynamoDB) and OpenShift for cloud deployments. Strong advocate of Agile, clean code, and automation. AWS Certified Developer – Associate.</p>
-      </div>
+  <section>
+    <h2>Professional Summary</h2>
+    <p>Experienced Senior Java Developer with 7+ years in backend and full-stack development, specializing in microservices, Spring Boot, and cloud technologies including AWS, Docker, Kubernetes, and OpenShift. Proven experience across telecom and automotive domains with high-performing, scalable solutions.</p>
+
+    <div class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Java 7–11, SQL</li>
+        <li><strong>Frameworks:</strong> Spring Boot, REST APIs, JPA, Hibernate</li>
+        <li><strong>Cloud/DevOps:</strong> AWS, Docker, Kubernetes, OpenShift</li>
+        <li><strong>Messaging:</strong> Apache Kafka, JMS</li>
+        <li><strong>Databases:</strong> MySQL, PostgreSQL, DynamoDB</li>
+        <li><strong>UI:</strong> React, Angular, HTML/CSS, JavaScript</li>
+        <li><strong>Tools:</strong> GitHub, Jenkins, Splunk, Kibana, Dynatrace</li>
+      </ul>
     </div>
 
-    <div class="section">
-      <h2>Technical Skills</h2>
-      <div class="card skills">
-        <p><strong>Languages & Backend:</strong></p>
-        <span>Java (7–11)</span><span>Spring Boot</span><span>REST APIs</span><span>Microservices</span><span>Kafka</span><span>Hibernate</span><span>JPA</span><span>Dropwizard</span>
-        <p><strong>Testing:</strong></p>
-        <span>JUnit</span><span>Mockito</span><span>Cucumber</span><span>Postman</span><span>Swagger</span><span>TestNG</span><span>TDD</span><span>BDD</span>
-        <p><strong>Cloud & DevOps:</strong></p>
-        <span>AWS (EC2, S3, RDS, DynamoDB, IAM, Lambda)</span><span>OpenShift</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>GitHub Actions</span>
-        <p><strong>Databases:</strong></p>
-        <span>Oracle</span><span>PostgreSQL</span><span>MySQL</span><span>DynamoDB</span><span>PL/SQL</span>
-        <p><strong>Frontend:</strong></p>
-        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>ReactJS</span><span>AngularJS</span><span>Node.js</span>
-      </div>
+    <div class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>ZipCar (via Ventois Inc)</strong> – Microservices-based car-sharing platform (Java, Spring Boot, AWS, Kafka)</li>
+        <li><strong>Charter Communications (via Ventois Inc)</strong> – Cloud-native telecom applications (Java, Docker, OpenShift)</li>
+        <li><strong>HCL Technologies (via Winsun Global Tech)</strong> – Legacy modernization and full-stack solutions</li>
+      </ul>
     </div>
 
-    <div class="section">
-      <h2>Professional Experience</h2>
-      <div class="card">
-        <h3>Senior Software Developer — Ventois Inc (ZipCar) | May 2024 – Present</h3>
-        <p>Developed RESTful APIs with Spring Boot and Kafka. Improved system throughput by 25%. Integrated Hibernate with Oracle and PostgreSQL. Handled full SDLC in Agile. Managed CI/CD pipelines via Jenkins and Git. Created Contact Management microservice. Provided QA support and implemented monitoring with Splunk and Dynatrace.</p>
-      </div>
-      <div class="card">
-        <h3>Senior Software Developer — Ventois Inc (Charter Communications) | Sep 2022 – May 2024</h3>
-        <p>Refactored monoliths to microservices using Spring Boot and Kafka. Deployed to AWS using EC2, RDS, S3. Implemented OAuth 2.0, JWT, Spring Security. Managed CI/CD via Jenkins and GitHub Actions. Integrated Docker, Kubernetes, OpenShift. Built REST APIs and reusable frontend React components.</p>
-      </div>
-      <div class="card">
-        <h3>Software Developer — Winsun Global Tech (HCL Technologies) | Jun 2014 – Jan 2019</h3>
-        <p>Worked across full SDLC. Built RESTful APIs with Spring Boot & MVC. Developed frontend with HTML, CSS, JS. Integrated SOAP services. Optimized DB access with Hibernate. Implemented batch processing and logging using Log4j. Designed reusable DAO/service layers and integrated SSO for security.</p>
-      </div>
+    <div class="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Senior Java Developer</strong> – Ventois Inc | 2022 – Present</li>
+        <li><strong>Java Developer</strong> – Winsun Global Tech | 2018 – 2022</li>
+      </ul>
     </div>
 
-    <div class="section">
+    <div class="education">
       <h2>Education</h2>
-      <div class="card">
-        <p><strong>Masters in Computer Science</strong> – Fitchburg State University, MA, USA (May 2022)</p>
-        <p><strong>Bachelor of Computer Application</strong> – Karnataka University, Dharwad, India (June 2014)</p>
-      </div>
+      <ul>
+        <li><strong>Master’s in Computer Science</strong> – Fitchburg State University</li>
+        <li><strong>Bachelor’s in Computer Science</strong> – Karnataka University</li>
+      </ul>
     </div>
 
-    <div class="section contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email: <a href="mailto:vidyaraniuppin1992@gmail.com">vidyaraniuppin1992@gmail.com</a></p>
-        <p>Phone: 508.314.6175</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/vidyaraniishwaruppin/" target="_blank">linkedin.com/in/vidyaraniishwaruppin</a></p>
-        <p>GitHub: <a href="https://github.com/vidyaraniuppin" target="_blank">github.com/vidyaraniuppin</a></p>
-      </div>
+    <div class="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>AWS Certified Developer – Associate</li>
+      </ul>
     </div>
-  </div>
+
+    <div class="contact">
+      <h2>Connect</h2>
+      <p>
+        <a href="https://github.com/vidyaraniuppin" target="_blank">GitHub</a> | 
+        <a href="https://linkedin.com/in/vidyaraniuppin" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Vidyarani Ishwar Uppin. All rights reserved.
+    &copy; 2025 Vidyarani Uppin. All rights reserved.
   </footer>
 </body>
+
 </html>
