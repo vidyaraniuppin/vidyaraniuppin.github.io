@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vidyarani Uppin | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -16,55 +16,71 @@
     body {
       background-color: #f4f7fa;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       background-color: #004aad;
       color: white;
-      padding: 60px 20px 40px;
+      padding: 50px 20px;
       text-align: center;
     }
 
     .profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      object-fit: cover;
       border: 5px solid white;
+      object-fit: cover;
       margin-bottom: 20px;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 800;
     }
 
     header h2 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 400;
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
-    section {
-      max-width: 960px;
+    main {
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
+    section {
+      margin-bottom: 50px;
+    }
+
     h3 {
       color: #004aad;
-      margin-bottom: 10px;
-      font-size: 1.8rem;
+      margin-bottom: 15px;
+      font-size: 1.7rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 6px;
     }
 
     ul {
-      list-style-type: disc;
       padding-left: 20px;
+      margin-top: 10px;
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      font-weight: 600;
+      margin-top: 20px;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 10px;
     }
 
     a {
@@ -76,44 +92,37 @@
       text-decoration: underline;
     }
 
+    .contact-links p {
+      margin: 6px 0;
+    }
+
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 25px 15px;
       background-color: #004aad;
       color: white;
-      margin-top: 40px;
-    }
-
-    .subheading {
-      font-weight: bold;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin-bottom: 15px;
     }
 
     @media (max-width: 600px) {
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
       header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
 
       header h2 {
-        font-size: 1rem;
-      }
-
-      .profile-pic {
-        width: 120px;
-        height: 120px;
-      }
-
-      section {
-        padding: 0 15px;
+        font-size: 0.95rem;
       }
 
       h3 {
         font-size: 1.4rem;
+      }
+
+      main {
+        padding: 0 15px;
       }
     }
   </style>
@@ -126,63 +135,68 @@
     <h2>Senior Java Developer | AWS Certified | Full Stack Engineer</h2>
   </header>
 
-  <section>
-    <h3>About Me</h3>
-    <p>Hello! 👋 I'm Vidyarani, a Senior Java Developer with over 7 years of experience in building scalable backend services and full-stack web applications.</p>
-    <p>Currently working at Ventois Inc (clients: ZipCar and Charter Communications), I specialize in Java, Spring Boot, REST APIs, Microservices, Kafka, AWS, Docker, and Kubernetes.</p>
-    <p>I’m passionate about cloud-native development, automation, and clean code. Recently, I earned my AWS Certified Developer – Associate credential.</p>
-  </section>
+  <main>
+    <section>
+      <h3>About Me</h3>
+      <p>Hello! 👋 I'm Vidyarani, a Senior Java Developer with over 7 years of experience in building scalable backend services and full-stack web applications.</p>
+      <p>Currently working at Ventois Inc (clients: ZipCar and Charter Communications), I specialize in Java, Spring Boot, REST APIs, Microservices, Kafka, AWS, Docker, and Kubernetes.</p>
+      <p>I’m passionate about cloud-native development, automation, and writing clean, maintainable code. I recently earned my AWS Certified Developer – Associate credential.</p>
+    </section>
 
-  <section>
-    <h3>Tech Stack</h3>
-    <ul>
-      <li><strong>Programming:</strong> Java, Python, SQL, JavaScript, Shell Scripting</li>
-      <li><strong>Cloud & DB:</strong> AWS (EC2, Lambda, S3, RDS), MySQL, PostgreSQL, MongoDB</li>
-      <li><strong>Microservices & DevOps:</strong> Spring Boot, Docker, Kubernetes, OpenShift, Jenkins</li>
-      <li><strong>Frontend:</strong> React, Angular, Vue.js</li>
-      <li><strong>Monitoring & CI/CD:</strong> Splunk, Dynatrace, GitHub Actions</li>
-    </ul>
-  </section>
+    <section>
+      <h3>Tech Stack</h3>
+      <ul>
+        <li><strong>Programming:</strong> Java, Python, SQL, JavaScript, Shell Scripting</li>
+        <li><strong>Cloud & DB:</strong> AWS (EC2, Lambda, S3, RDS), MySQL, PostgreSQL, MongoDB</li>
+        <li><strong>Microservices & DevOps:</strong> Spring Boot, Docker, Kubernetes, OpenShift, Jenkins</li>
+        <li><strong>Frontend:</strong> React, Angular, Vue.js</li>
+        <li><strong>Monitoring & CI/CD:</strong> Splunk, Dynatrace, GitHub Actions</li>
+      </ul>
+    </section>
 
-  <section>
-    <h3>Work Experience</h3>
-    <p class="subheading">Senior Java Developer – Ventois Inc (ZipCar, Charter)</p>
-    <p>Jan 2022 – Present</p>
-    <ul>
-      <li>Built scalable RESTful microservices using Java 11, Spring Boot, and Kafka</li>
-      <li>Deployed services on OpenShift and Kubernetes clusters</li>
-      <li>Integrated CI/CD with GitHub Actions and Jenkins</li>
-    </ul>
+    <section>
+      <h3>Work Experience</h3>
 
-    <p class="subheading">Java Developer – Winsun Global Tech (HCL)</p>
-    <p>2019 – 2021</p>
-    <ul>
-      <li>Worked on enterprise applications using Dropwizard, JPA, and Hibernate</li>
-      <li>Followed BDD using Cucumber and TestNG</li>
-    </ul>
-  </section>
+      <p class="subheading">Senior Java Developer – Ventois Inc (ZipCar, Charter)</p>
+      <p>Jan 2022 – Present</p>
+      <ul>
+        <li>Built scalable RESTful microservices using Java 11, Spring Boot, and Kafka</li>
+        <li>Deployed services on OpenShift and Kubernetes clusters</li>
+        <li>Integrated CI/CD with GitHub Actions and Jenkins</li>
+      </ul>
 
-  <section>
-    <h3>Education</h3>
-    <p><strong>Master of Computer Science</strong> – Fitchburg State University, USA</p>
-    <p><strong>Bachelor of Computer Science</strong> – Karnataka University, India</p>
-  </section>
+      <p class="subheading">Java Developer – Winsun Global Tech (HCL)</p>
+      <p>2019 – 2021</p>
+      <ul>
+        <li>Worked on enterprise applications using Dropwizard, JPA, and Hibernate</li>
+        <li>Followed BDD using Cucumber and TestNG</li>
+      </ul>
+    </section>
 
-  <section>
-    <h3>Certifications</h3>
-    <ul>
-      <li>AWS Certified Developer – Associate</li>
-      <li>Scrum Fundamentals Certified</li>
-    </ul>
-  </section>
+    <section>
+      <h3>Education</h3>
+      <p><strong>Master of Computer Science</strong> – Fitchburg State University, USA</p>
+      <p><strong>Bachelor of Computer Science</strong> – Karnataka University, India</p>
+    </section>
 
-  <section>
-    <h3>Contact</h3>
-    <p>Email: <a href="mailto:vidyaraniuppin1992@gmail.com">vidyaraniuppin1992@gmail.com</a></p>
-    <p>Phone: 508-314-6175</p>
-    <p>Website: <a href="https://vidyaraniuppin.github.io" target="_blank">vidyaraniuppin.github.io</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/vidyaraniuppin" target="_blank">linkedin.com/in/vidyaraniuppin</a></p>
-  </section>
+    <section>
+      <h3>Certifications</h3>
+      <ul>
+        <li>AWS Certified Developer – Associate</li>
+        <li>Scrum Fundamentals Certified</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Contact</h3>
+      <div class="contact-links">
+        <p>Email: <a href="mailto:vidyaraniuppin1992@gmail.com">vidyaraniuppin1992@gmail.com</a></p>
+        <p>Phone: 508-314-6175</p>
+        <p>Website: <a href="https://vidyaraniuppin.github.io" target="_blank">vidyaraniuppin.github.io</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/vidyaraniuppin" target="_blank">linkedin.com/in/vidyaraniuppin</a></p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Vidyarani Ishwar Uppin. All rights reserved.</p>
