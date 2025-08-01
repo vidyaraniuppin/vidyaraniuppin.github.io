@@ -299,6 +299,61 @@
   50% { transform: translateY(-8px) scale(1.1); }
 }
 
+.education-section {
+  margin: 50px 0;
+}
+
+.education-section h3 {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+.edu-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+.edu-card:hover {
+  transform: scale(1.02);
+}
+
+.edu-logo {
+  width: 80px;
+  margin-right: 20px;
+  transition: transform 0.5s;
+}
+
+.edu-logo.fitchburg:hover {
+  transform: rotate(360deg) scale(1.1);
+}
+.edu-logo.karnatak:hover {
+  animation: bounce 0.6s ease-in-out;
+}
+
+.edu-content h4 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.edu-content p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px) scale(1.05); }
+}
 
   </style>
 </head>
@@ -442,19 +497,27 @@
 </section>
 
 
-    <section>
-      <h3>Education</h3>
-      <p><strong>Master of Computer Science</strong> – Fitchburg State University, USA</p>
-      <p><strong>Bachelor of Computer Science</strong> – Karnataka University, India</p>
-    </section>
+    <section class="education-section">
+  <h3>Education</h3>
+  <div class="edu-card">
+    <img src="FITCHBURG_LOGO_URL" alt="Fitchburg State University Logo" class="edu-logo fitchburg" />
+    <div class="edu-content">
+      <h4>Master of Science in Computer Science</h4>
+      <p><strong>Institution:</strong> Fitchburg State University (MA, USA) | GPA: 3.91 / 4.0</p>
+      <p><strong>Key Subjects:</strong> Advanced Math for CS, Theory of Computation, Operating Systems & Networking, Practice of Programming, Object-Oriented Programming, Design & Analysis of Algorithms, Advanced Programming, Object-Oriented Design & Analysis, Data Mining & Predictive Analysis, Database Design</p>
+    </div>
+  </div>
 
-    <section>
-      <h3>Certifications</h3>
-      <ul>
-        <li>AWS Certified Developer – Associate</li>
-        <li>Scrum Fundamentals Certified</li>
-      </ul>
-    </section>
+  <div class="edu-card">
+    <img src="KARNATAK_LOGO_URL" alt="Karnataka University Dharwad Logo" class="edu-logo karnatak" />
+    <div class="edu-content">
+      <h4>Bachelor of Computer Applications</h4>
+      <p><strong>Institution:</strong> Karnataka University Dharwad (India) | Score: 8.80 / 10</p>
+      <p><strong>Focus Areas:</strong> Core computer applications, scripting, database fundamentals, programming logic and design, system basics, and application development</p>
+    </div>
+  </div>
+</section>
+
 
     <section>
       <h3>Contact</h3>
