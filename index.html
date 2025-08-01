@@ -466,15 +466,15 @@
 }
 
 
-    <style>
-.input-field {
-  @apply w-full px-4 py-3 rounded-xl border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300;
+   
+.custom-input {
+  @apply w-full px-6 py-4 rounded-2xl border border-gray-300 bg-white shadow-md text-lg focus:outline-none focus:ring-4 focus:ring-indigo-300 focus:border-indigo-500 transition-all;
 }
 
 .submit-btn {
-  @apply bg-indigo-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transform transition-all duration-300 hover:bg-indigo-700 hover:scale-105 active:scale-95;
+  @apply bg-gradient-to-r from-indigo-500 to-pink-500 text-white text-lg font-semibold py-4 px-10 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300;
 }
-</style>
+
 
     
   </style>
@@ -662,21 +662,22 @@
 
     
 
-   <section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 px-6 md:px-24">
-  <div class="max-w-3xl mx-auto bg-white shadow-2xl rounded-3xl p-10 border-t-8 border-indigo-500">
-    <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 text-center mb-6">💬 Let’s Get In Touch</h2>
-    <p class="text-gray-600 text-center mb-10">I'd love to hear from you! Feel free to reach out for project inquiries, collaborations, or just to say hello.</p>
-    <form class="space-y-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <input type="text" placeholder="Full Name" class="input-field" required>
-        <input type="email" placeholder="Email Address" class="input-field" required>
+   <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-indigo-100 to-blue-200 px-6 py-20">
+  <div class="w-full max-w-4xl bg-white/70 backdrop-blur-md shadow-2xl rounded-3xl border border-indigo-300 p-10 md:p-16">
+    <h2 class="text-4xl font-bold text-center text-indigo-800 mb-4">💬 Let's Get In Touch</h2>
+    <p class="text-center text-gray-700 text-lg mb-10">Drop a message — whether it's a new project, question, or just a hello!</p>
+    
+    <form class="space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <input type="text" placeholder="Full Name" class="custom-input" required>
+        <input type="email" placeholder="Email Address" class="custom-input" required>
       </div>
-      <input type="tel" placeholder="Phone Number" class="input-field w-full" required>
-      <textarea rows="5" placeholder="Your Message..." class="input-field w-full resize-none" required></textarea>
-
-      <div class="text-center">
+      <input type="tel" placeholder="Phone Number" class="custom-input w-full" required>
+      <textarea rows="5" placeholder="Your Message..." class="custom-input w-full resize-none" required></textarea>
+      
+      <div class="text-center pt-4">
         <button type="submit" class="submit-btn">
-          🚀 Send Message
+          ✉️ Submit Message
         </button>
       </div>
     </form>
