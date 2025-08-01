@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vidyarani Uppin | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidyarani Ishwar Uppin | Senior Java Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -12,100 +12,161 @@
       margin: 0;
       padding: 0;
     }
+
     body {
-      background: #f8f9fa;
+      background: #f9f9f9;
       color: #333;
-      padding: 2rem;
       line-height: 1.6;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    .profile {
+
+    header {
+      background: #007bff;
+      color: white;
+      padding: 2rem 1rem;
       text-align: center;
     }
-    .profile img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    .profile h1 {
-      font-size: 2.2rem;
+
+    header h1 {
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
-    .profile p {
-      font-size: 1.1rem;
-      color: #666;
+
+    header p {
+      font-size: 1.2rem;
     }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
     .section {
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
+
     .section h2 {
-      font-size: 1.5rem;
+      color: #007bff;
       border-bottom: 2px solid #007bff;
-      padding-bottom: 0.5rem;
+      display: inline-block;
       margin-bottom: 1rem;
-      color: #007bff;
     }
+
     .card {
-      background: #f1f1f1;
-      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
       margin-bottom: 1rem;
-      border-radius: 8px;
     }
-    .social a {
-      margin: 0 0.5rem;
-      text-decoration: none;
+
+    .skills span {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    .contact a {
       color: #007bff;
-      font-weight: bold;
+      text-decoration: none;
+      margin: 0 0.5rem;
     }
-    @media (max-width: 600px) {
-      body {
+
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .card, .container {
         padding: 1rem;
       }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Vidyarani Ishwar Uppin</h1>
+    <p>Senior Java Developer | AWS Certified | Full Stack Engineer</p>
+    <p>
+      📩 <a href="mailto:vidyaraniuppin1992@gmail.com" style="color:white;">vidyaraniuppin1992@gmail.com</a> |
+      ☎ 508.314.6175 |
+      <a href="https://www.linkedin.com/in/vidyaraniishwaruppin/" target="_blank" style="color:white;">LinkedIn</a>
+    </p>
+  </header>
+
   <div class="container">
-    <div class="profile">
-      <img src="images/profile.jpg" alt="Vidyarani Uppin">
-      <h1>Vidyarani Uppin</h1>
-      <p>Full Stack Developer | Java | AWS | Microservices | React</p>
-    </div>
-
     <div class="section">
-      <h2>About Me</h2>
-      <p>
-        I’m a passionate full stack developer with 10+ years of experience building scalable Java-based backend systems, intuitive React/Angular SPAs, and integrating modern DevOps practices on cloud platforms like AWS and OpenShift.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>Projects</h2>
+      <h2>Professional Summary</h2>
       <div class="card">
-        <h3>Pharma Data Platform</h3>
-        <p>Designed and developed a high-availability platform for managing pharmaceutical data using Spring Boot, Kafka, and PostgreSQL.</p>
-      </div>
-      <div class="card">
-        <h3>AWS Monitoring Dashboard</h3>
-        <p>Created dashboards with Splunk and Kibana for real-time analysis and alerts on AWS infrastructure health and logs.</p>
+        <p>Senior Java Developer with 7+ years of experience in designing, developing, and deploying scalable, cloud-native applications. Proven expertise in building robust RESTful APIs and microservices using Java 8+, Spring Boot, Hibernate, and Apache Kafka. Experienced in CI/CD with Jenkins, GitHub Actions, Docker, and Kubernetes. Skilled in AWS services (EC2, S3, RDS, IAM, DynamoDB) and OpenShift for cloud deployments. Strong advocate of Agile, clean code, and automation. AWS Certified Developer – Associate.</p>
       </div>
     </div>
 
     <div class="section">
+      <h2>Technical Skills</h2>
+      <div class="card skills">
+        <p><strong>Languages & Backend:</strong></p>
+        <span>Java (7–11)</span><span>Spring Boot</span><span>REST APIs</span><span>Microservices</span><span>Kafka</span><span>Hibernate</span><span>JPA</span><span>Dropwizard</span>
+        <p><strong>Testing:</strong></p>
+        <span>JUnit</span><span>Mockito</span><span>Cucumber</span><span>Postman</span><span>Swagger</span><span>TestNG</span><span>TDD</span><span>BDD</span>
+        <p><strong>Cloud & DevOps:</strong></p>
+        <span>AWS (EC2, S3, RDS, DynamoDB, IAM, Lambda)</span><span>OpenShift</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>GitHub Actions</span>
+        <p><strong>Databases:</strong></p>
+        <span>Oracle</span><span>PostgreSQL</span><span>MySQL</span><span>DynamoDB</span><span>PL/SQL</span>
+        <p><strong>Frontend:</strong></p>
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>ReactJS</span><span>AngularJS</span><span>Node.js</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Professional Experience</h2>
+      <div class="card">
+        <h3>Senior Software Developer — Ventois Inc (ZipCar) | May 2024 – Present</h3>
+        <p>Developed RESTful APIs with Spring Boot and Kafka. Improved system throughput by 25%. Integrated Hibernate with Oracle and PostgreSQL. Handled full SDLC in Agile. Managed CI/CD pipelines via Jenkins and Git. Created Contact Management microservice. Provided QA support and implemented monitoring with Splunk and Dynatrace.</p>
+      </div>
+      <div class="card">
+        <h3>Senior Software Developer — Ventois Inc (Charter Communications) | Sep 2022 – May 2024</h3>
+        <p>Refactored monoliths to microservices using Spring Boot and Kafka. Deployed to AWS using EC2, RDS, S3. Implemented OAuth 2.0, JWT, Spring Security. Managed CI/CD via Jenkins and GitHub Actions. Integrated Docker, Kubernetes, OpenShift. Built REST APIs and reusable frontend React components.</p>
+      </div>
+      <div class="card">
+        <h3>Software Developer — Winsun Global Tech (HCL Technologies) | Jun 2014 – Jan 2019</h3>
+        <p>Worked across full SDLC. Built RESTful APIs with Spring Boot & MVC. Developed frontend with HTML, CSS, JS. Integrated SOAP services. Optimized DB access with Hibernate. Implemented batch processing and logging using Log4j. Designed reusable DAO/service layers and integrated SSO for security.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <div class="card">
+        <p><strong>Masters in Computer Science</strong> – Fitchburg State University, MA, USA (May 2022)</p>
+        <p><strong>Bachelor of Computer Application</strong> – Karnataka University, Dharwad, India (June 2014)</p>
+      </div>
+    </div>
+
+    <div class="section contact">
       <h2>Contact</h2>
-      <p>Email: vidyarani@example.com</p>
-      <div class="social">
-        <a href="https://github.com/vidyaraniuppin" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/vidyaraniuppin" target="_blank">LinkedIn</a>
+      <div class="card">
+        <p>Email: <a href="mailto:vidyaraniuppin1992@gmail.com">vidyaraniuppin1992@gmail.com</a></p>
+        <p>Phone: 508.314.6175</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/vidyaraniishwaruppin/" target="_blank">linkedin.com/in/vidyaraniishwaruppin</a></p>
+        <p>GitHub: <a href="https://github.com/vidyaraniuppin" target="_blank">github.com/vidyaraniuppin</a></p>
       </div>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 Vidyarani Ishwar Uppin. All rights reserved.
+  </footer>
 </body>
 </html>
