@@ -244,54 +244,60 @@
   margin: 50px 0;
 }
 
+.experience-section h3 {
+  font-size: 1.9rem;
+  color: #004aad;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .company-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 30px;
   background: #fff;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s;
 }
+
 .company-card:hover {
-  transform: scale(1.015);
+  transform: scale(1.01);
 }
 
 .company-logo {
   width: 80px;
-  height: auto;
   margin-right: 20px;
-  transition: transform 0.4s, filter 0.4s;
-}
-
-.company-logo.zipcar:hover {
-  transform: rotate(10deg) scale(1.2);
-}
-.company-logo.charter:hover {
-  filter: brightness(1.3);
-  transform: scale(1.15);
-}
-.company-logo.hcl:hover {
-  animation: bounce 0.5s ease-in-out;
+  transition: transform 0.5s, filter 0.5s;
 }
 
 .company-content h4 {
-  margin: 0 0 8px;
-  font-size: 1.2rem;
+  margin: 0 0 12px;
+  font-size: 1.25rem;
   color: #004aad;
 }
 
-.company-content p {
+.company-content ul {
   margin: 0;
+  padding-left: 20px;
+}
+
+.company-content li {
+  margin-bottom: 8px;
   color: #333;
   line-height: 1.5;
 }
 
+.company-logo.hcl:hover {
+  animation: bounce 0.6s ease-in-out;
+}
+
 @keyframes bounce {
   0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-8px) scale(1.1); }
 }
+
 
   </style>
 </head>
@@ -388,30 +394,52 @@
     <section class="experience-section">
   <h3>Work Experience</h3>
 
+  <!-- Zipcar -->
   <div class="company-card">
-    <img src="images/ZIPCAR_LOGO_URL" alt="Zipcar Logo" class="company-logo zipcar" />
+    <img src="ZIPCAR_LOGO_URL" alt="Zipcar Logo" class="company-logo zipcar" />
     <div class="company-content">
       <h4>Zipcar (via Ventois Inc) – Senior Java Developer</h4>
-      <p>Partnered with Zipcar to deliver high‑throughput microservices using Spring Boot and Kafka—leading to a 25% performance boost. Drove agile sprint delivery, CI/CD automation, and high-impact API design collaborating across teams.</p>
+      <ul>
+        <li>Developed Spring Boot microservices and Kafka streams to handle 100K+ daily booking events with 30% improved API latency.</li>
+        <li>Enabled third‑party integrations for payments and GPS data via secure OAuth2/JWT flows.</li>
+        <li>Led CI/CD migration to GitHub Actions & Jenkins for streamlined production releases.</li>
+        <li>Optimized memory usage by 40% using JProfiler and JVM tuning based on production load tests.</li>
+        <li>Collaborated with Scrum teams (Jira, Confluence) to ensure sprint flow and quality delivery.</li>
+      </ul>
     </div>
   </div>
 
+  <!-- Charter Communications -->
   <div class="company-card">
-    <img src="images/CHARTER_LOGO_URL" alt="Charter Communications Logo" class="company-logo charter" />
+    <img src="CHARTER_LOGO_URL" alt="Charter Communications Logo" class="company-logo charter" />
     <div class="company-content">
       <h4>Charter Communications – Senior Software Developer</h4>
-      <p>Refactored legacy monoliths into modular microservices using Spring Boot, Kafka, AWS deployment. Led backend team migrations and implemented secure OAuth/JWT flows. Reduced deployment time by 40% while enhancing cloud cost efficiency.</p>
+      <ul>
+        <li>Transformed monolithic Java apps into scalable Spring Boot microservices, reducing technical debt 50% and deployment cycles by 40%.</li>
+        <li>Implemented real-time event streaming with Kafka for billing and subscription workflows.</li>
+        <li>Built test coverage above 90% using JUnit 5, Mockito, Cucumber; enforced BDD practices.</li>
+        <li>Led containerization in Docker and Kubernetes/OpenShift for simplified environment management.</li>
+        <li>Designed and deployed secure OAuth2 and Spring Security based RBAC with Okta SSO integration.</li>
+      </ul>
     </div>
   </div>
 
+  <!-- HCL -->
   <div class="company-card">
-    <img src="images/HCL_LOGO_URL.png" alt="HCL Technologies Logo" class="company-logo hcl" />
+    <img src="HCL_LOGO_URL" alt="HCL Technologies Logo" class="company-logo hcl" />
     <div class="company-content">
-      <h4>HCL Technology – Software Developer</h4>
-      <p>Built enterprise-grade applications with Spring MVC, Hibernate, and REST APIs. Optimized PL/SQL data flows and batch jobs. Promoted clean code with design patterns and tool integration across front and backend stacks.</p>
+      <h4>HCL Technologies – Software Developer</h4>
+      <ul>
+        <li>Developed REST APIs and internal tools using Java 8, Spring MVC, and Hibernate for Telecom industry clients.</li>
+        <li>Built PL/SQL procedures and scheduled batch jobs to automate large-scale data workflows, recovering 20+ hours monthly.</li>
+        <li>Created frontend UIs using AngularJS and connected them securely to backend services.</li>
+        <li>Adopted design patterns (DAO, Factory, Singleton) for modular and maintainable code.</li>
+        <li>Used Jenkins CI, SOAP UI, and Git for automated builds, testing, and version control.</li>
+      </ul>
     </div>
   </div>
 </section>
+
 
     <section>
       <h3>Education</h3>
