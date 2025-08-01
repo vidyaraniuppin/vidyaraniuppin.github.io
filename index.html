@@ -240,6 +240,58 @@
     font-size: 0.9rem;
   }
 }
+.experience-section {
+  margin: 50px 0;
+}
+
+.company-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+.company-card:hover {
+  transform: scale(1.015);
+}
+
+.company-logo {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+  transition: transform 0.4s, filter 0.4s;
+}
+
+.company-logo.zipcar:hover {
+  transform: rotate(10deg) scale(1.2);
+}
+.company-logo.charter:hover {
+  filter: brightness(1.3);
+  transform: scale(1.15);
+}
+.company-logo.hcl:hover {
+  animation: bounce 0.5s ease-in-out;
+}
+
+.company-content h4 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  color: #004aad;
+}
+
+.company-content p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
 
   </style>
 </head>
@@ -333,24 +385,33 @@
       </div>
     </section>
 
-    <section>
-      <h3>Work Experience</h3>
+    <section class="experience-section">
+  <h3>Work Experience</h3>
 
-      <p class="subheading">Senior Java Developer – Ventois Inc (ZipCar, Charter)</p>
-      <p>Jan 2022 – Present</p>
-      <ul>
-        <li>Built scalable RESTful microservices using Java 11, Spring Boot, and Kafka</li>
-        <li>Deployed services on OpenShift and Kubernetes clusters</li>
-        <li>Integrated CI/CD with GitHub Actions and Jenkins</li>
-      </ul>
+  <div class="company-card">
+    <img src="ZIPCAR_LOGO_URL" alt="Zipcar Logo" class="company-logo zipcar" />
+    <div class="company-content">
+      <h4>Zipcar (via Ventois Inc) – Senior Java Developer</h4>
+      <p>Partnered with Zipcar to deliver high‑throughput microservices using Spring Boot and Kafka—leading to a 25% performance boost. Drove agile sprint delivery, CI/CD automation, and high-impact API design collaborating across teams.</p>
+    </div>
+  </div>
 
-      <p class="subheading">Java Developer – Winsun Global Tech (HCL)</p>
-      <p>2019 – 2021</p>
-      <ul>
-        <li>Worked on enterprise applications using Dropwizard, JPA, and Hibernate</li>
-        <li>Followed BDD using Cucumber and TestNG</li>
-      </ul>
-    </section>
+  <div class="company-card">
+    <img src="CHARTER_LOGO_URL" alt="Charter Communications Logo" class="company-logo charter" />
+    <div class="company-content">
+      <h4>Charter Communications – Senior Software Developer</h4>
+      <p>Refactored legacy monoliths into modular microservices using Spring Boot, Kafka, AWS deployment. Led backend team migrations and implemented secure OAuth/JWT flows. Reduced deployment time by 40% while enhancing cloud cost efficiency.</p>
+    </div>
+  </div>
+
+  <div class="company-card">
+    <img src="HCL_LOGO_URL" alt="HCL Technologies Logo" class="company-logo hcl" />
+    <div class="company-content">
+      <h4>HCL Technology – Software Developer</h4>
+      <p>Built enterprise-grade applications with Spring MVC, Hibernate, and REST APIs. Optimized PL/SQL data flows and batch jobs. Promoted clean code with design patterns and tool integration across front and backend stacks.</p>
+    </div>
+  </div>
+</section>
 
     <section>
       <h3>Education</h3>
