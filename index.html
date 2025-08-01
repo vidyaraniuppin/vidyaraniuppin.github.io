@@ -190,6 +190,57 @@
         padding: 0 15px;
       }
     }
+    .detailed-tech-stack {
+  margin: 40px 0;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.detailed-tech-stack h3 {
+  font-size: 1.9rem;
+  color: #004aad;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tech-category {
+  margin-bottom: 25px;
+}
+
+.tech-category h4 {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.tech-category p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+  padding-left: 10px;
+  border-left: 3px solid #004aad;
+  background-color: #f9fbfd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .detailed-tech-stack h3 {
+    font-size: 1.5rem;
+  }
+
+  .tech-category h4 {
+    font-size: 1rem;
+  }
+
+  .tech-category p {
+    font-size: 0.9rem;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -208,16 +259,45 @@
       <p>I’m passionate about cloud-native development, automation, and writing clean, maintainable code. I recently earned my AWS Certified Developer – Associate credential.</p>
     </section>
 
-    <section>
-      <h3>Tech Stack</h3>
-      <ul>
-        <li><strong>Programming:</strong> Java, Python, SQL, JavaScript, Shell Scripting</li>
-        <li><strong>Cloud & DB:</strong> AWS (EC2, Lambda, S3, RDS), MySQL, PostgreSQL, MongoDB</li>
-        <li><strong>Microservices & DevOps:</strong> Spring Boot, Docker, Kubernetes, OpenShift, Jenkins</li>
-        <li><strong>Frontend:</strong> React, Angular, Vue.js</li>
-        <li><strong>Monitoring & CI/CD:</strong> Splunk, Dynatrace, GitHub Actions</li>
-      </ul>
-    </section>
+    <section class="detailed-tech-stack">
+  <h3>Technical Proficiencies</h3>
+
+  <div class="tech-category">
+    <h4>💻 Languages & Backend Frameworks</h4>
+    <p>Java (7–11), Spring Boot, Spring MVC, REST APIs, Microservices, Apache Kafka, Hibernate, JPA, Multithreading, Dropwizard</p>
+  </div>
+
+  <div class="tech-category">
+    <h4>🧪 Testing & Quality Assurance</h4>
+    <p>JUnit, Mockito, Cucumber, Postman, Swagger/OpenAPI, TestNG, TDD, BDD</p>
+  </div>
+
+  <div class="tech-category">
+    <h4>☁️ Cloud & DevOps</h4>
+    <p>AWS (EC2, S3, RDS, DynamoDB, IAM, Lambda) — <strong>AWS Certified Developer – Associate</strong>, OpenShift, Docker, Kubernetes, Jenkins, GitHub Actions, GitLab CI/CD</p>
+  </div>
+
+  <div class="tech-category">
+    <h4>🗄️ Databases & Persistence</h4>
+    <p>Oracle, PostgreSQL, MySQL, DynamoDB, PL/SQL</p>
+  </div>
+
+  <div class="tech-category">
+    <h4>🎨 Frontend Technologies</h4>
+    <p>HTML5, CSS3, JavaScript, ReactJS, AngularJS, Node.js</p>
+  </div>
+
+  <div class="tech-category">
+    <h4>📁 Version Control & Project Management</h4>
+    <p>Git, Bitbucket, Jira, Confluence</p>
+  </div>
+
+  <div class="tech-category">
+    <h4>🧰 IDEs & Developer Tools</h4>
+    <p>IntelliJ IDEA, Eclipse, Visual Studio Code</p>
+  </div>
+</section>
+
 
     <section class="skills-section">
       <h3>Technical Skills (Visual)</h3>
