@@ -354,6 +354,56 @@
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-10px) scale(1.05); }
 }
+    .certification-section {
+  margin: 50px 0;
+}
+
+.certification-section h3 {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  margin: 0 auto 30px;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+.cert-card:hover {
+  transform: scale(1.02);
+}
+
+.cert-logo {
+  width: 100px;
+  margin-right: 20px;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+.cert-logo.aws:hover {
+  transform: rotate(360deg) scale(1.1);
+  filter: hue-rotate(20deg);
+}
+
+.cert-content h4 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.cert-content p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 
   </style>
 </head>
@@ -496,6 +546,19 @@
   </div>
 </section>
 
+<section class="certification-section">
+  <h3>Certifications</h3>
+
+  <div class="cert-card">
+    <img src="aws-developer-associate-badge.png" alt="AWS Developer Associate Badge" class="cert-logo aws" />
+    <div class="cert-content">
+      <h4>AWS Certified Developer – Associate</h4>
+      <p><strong>Issued by:</strong> Amazon Web Services</p>
+      <p><strong>Verification ID:</strong> DVA-C02‑16CHARCODE1234</p>
+      <p>This AWS certification validates your ability to design, deploy, and maintain cloud-based applications using key services like EC2, Lambda, S3, and CI/CD pipelines. Recognized for robust development and debugging skillsets in AWS environments. Valid for 3 years.:contentReference[oaicite:7]{index=7}</p>
+    </div>
+  </div>
+</section>
 
     <section class="education-section">
   <h3>Education</h3>
