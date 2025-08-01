@@ -354,6 +354,91 @@
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-10px) scale(1.05); }
 }
+    .cert-section {
+  margin: 60px 0;
+}
+.cert-section h3 {
+  font-size: 2rem;
+  color: #004aad;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+.cert-section h3::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #004aad;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  max-width: 720px;
+  width: 100%;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cert-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.cert-badge {
+  width: 110px;
+  flex-shrink: 0;
+  transition: transform 0.6s, filter 0.6s, box-shadow 0.6s;
+}
+.cert-badge:hover {
+  transform: rotate(5deg) scale(1.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
+}
+
+.cert-details {
+  padding-left: 25px;
+}
+.cert-details h4 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #222;
+}
+.cert-details p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 1rem;
+}
+.cert-desc {
+  margin-top: 8px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .cert-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cert-badge {
+    margin-bottom: 15px;
+  }
+  .cert-details {
+    padding-left: 0;
+  }
+}
+
     
   </style>
 </head>
@@ -492,6 +577,21 @@
         <li>Adopted design patterns (DAO, Factory, Singleton) for modular and maintainable code.</li>
         <li>Used Jenkins CI, SOAP UI, and Git for automated builds, testing, and version control.</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="cert-section">
+  <h3>🏅 Certifications</h3>
+  <div class="cert-grid">
+    <div class="cert-item">
+      <img src="aws-badge.png" alt="AWS Certified Developer – Associate Badge" class="cert-badge" />
+      <div class="cert-details">
+        <h4>AWS Certified Developer – Associate</h4>
+        <p><strong>Issuer:</strong> Amazon Web Services</p>
+        <p><strong>Verification ID:</strong> DVA‑C02‑16CHARCODE1234</p>
+        <p class="cert-desc">Demonstrates ability to design, deploy, and debug cloud-based applications on AWS. Validates proficiency with EC2, Lambda, S3, RDS, CI/CD and microservices architecture. Credential valid until 2028.</p>
+      </div>
     </div>
   </div>
 </section>
