@@ -2,233 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vidyarani Ishwar Uppin | Senior Java Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidyarani Uppin | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* Reset & base */
-    *, *::before, *::after {
+    * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
     }
+
     body {
-      margin: 0; padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9faff;
-      color: #222;
+      background-color: #f4f7fa;
+      color: #333;
       line-height: 1.6;
     }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
     a {
-      color: #2563eb;
+      color: #004aad;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
 
-    /* Container */
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1rem 1.5rem;
-    }
-
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #4f46e5, #3b82f6);
-      color: white; /* All header text white */
-      padding: 3rem 1rem 2rem;
-      text-align: center;
-    }
-    /* Removed header img styles and image tag */
-
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.2rem;
-      font-weight: 700;
-    }
-    header p.contact-info {
-      font-size: 1.1rem;
-      margin-top: 0.3rem;
-      color: white; /* explicitly white */
-    }
-    header p.contact-info a {
-      margin: 0 0.5rem;
-      color: white; /* white links */
-    }
-    header p.contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    /* Section titles */
-    section h2 {
-      font-size: 2rem;
-      color: #2563eb;
-      border-bottom: 3px solid #2563eb;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1.2rem;
-      font-weight: 700;
-    }
-
-    /* About Section */
-    #about {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-    #about .photo {
-      flex: 1 1 280px;
-      max-width: 280px;
-    }
-    #about .photo img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
-    }
-    #about .content {
-      flex: 2 1 600px;
-    }
-    #about .content p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    #about .content p.intro {
-      font-weight: 600;
-      font-size: 1.25rem;
-    }
-
-    /* Skills, Experience, Education */
-    .skills ul,
-    .experience ul,
-    .education ul {
-      list-style: disc inside;
-      padding-left: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .skills li,
-    .experience li,
-    .education li {
-      margin-bottom: 0.6rem;
-      font-size: 1.1rem;
-    }
-
-    /* Experience job */
-    .experience .job {
-      margin-bottom: 1.5rem;
-    }
-    .experience .job h3 {
-      margin: 0 0 0.2rem;
-      color: #1e40af;
-    }
-    .experience .job .date {
-      font-style: italic;
-      font-size: 0.9rem;
-      color: #4b5563;
-      margin-bottom: 0.5rem;
-    }
-    .experience .job p {
-      margin: 0;
-      font-size: 1rem;
-      color: #374151;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      #about {
-        flex-direction: column;
-      }
-      #about .photo,
-      #about .content {
-        max-width: 100%;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-    }
-
-    /* Footer */
     footer {
       text-align: center;
-      padding: 1rem 0;
-      background: #2563eb;
+      padding: 30px;
+      background-color: #004aad;
       color: white;
-      font-size: 0.9rem;
-      margin-top: 4rem;
+      margin-top: 40px;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      header h2 {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 0 15px;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <!-- Removed the profile image from header -->
     <h1>Vidyarani Ishwar Uppin</h1>
-    <p class="contact-info">
-      📧 <a href="mailto:vidyaraniuppin1992@gmail.com">vidyaraniuppin1992@gmail.com</a> |  
-      ☎ 508.314.6175 |  
-      <a href="https://www.linkedin.com/in/vidyaraniishwaruppin/" target="_blank" rel="noopener">LinkedIn</a> | 
-      <a href="https://github.com/vidyaraniuppin" target="_blank" rel="noopener">GitHub</a>
-    </p>
+    <h2>Senior Java Developer | AWS Certified | Full Stack Engineer</h2>
   </header>
 
-  <main class="container">
-    <section id="about">
-      <div class="photo">
-        <img src="images/profile.jpg" alt="Vidyarani Ishwar Uppin" />
-      </div>
-      <div class="content">
-        <p class="intro">Welcome! 👋 I'm a Senior Java Developer with over 7 years of experience, currently working at Ventois Inc serving clients like ZipCar and Charter Communications. 👩‍💻</p>
-        <p>
-          I’m passionate about designing and deploying scalable, cloud-native applications using Java, Spring Boot, microservices, and Apache Kafka. Experienced in CI/CD pipelines, Docker, Kubernetes, and AWS cloud services.
-        </p>
-        <p>
-          Recently earned the AWS Certified Developer – Associate certification. I focus on clean code, automation, and performance optimization, and I continuously strive to learn and implement new technologies.
-        </p>
-      </div>
-    </section>
+  <section>
+    <h3>About Me</h3>
+    <p>Hello! 👋 I'm Vidyarani, a Senior Java Developer with over 7 years of experience in building scalable backend services and full-stack web applications.</p>
+    <p>Currently working at Ventois Inc (clients: ZipCar and Charter Communications), I specialize in Java, Spring Boot, REST APIs, Microservices, Kafka, AWS, Docker, and Kubernetes.</p>
+    <p>I’m passionate about cloud-native development, automation, and clean code. Recently, I earned my AWS Certified Developer – Associate credential.</p>
+  </section>
 
-    <section class="skills">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Languages & Frameworks:</strong> Java (7–11), Spring Boot, Microservices, REST APIs, Kafka, Hibernate, JPA, Dropwizard</li>
-        <li><strong>Testing & QA:</strong> JUnit, Mockito, Cucumber, Postman, Swagger/OpenAPI, TestNG, TDD, BDD</li>
-        <li><strong>Cloud & DevOps:</strong> AWS (EC2, S3, RDS, DynamoDB, IAM, Lambda), OpenShift, Docker, Kubernetes, Jenkins, GitHub Actions</li>
-        <li><strong>Databases:</strong> Oracle, PostgreSQL, MySQL, DynamoDB, PL/SQL</li>
-        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, ReactJS, AngularJS, Node.js</li>
-        <li><strong>Version Control & Tools:</strong> Git, Bitbucket, Jira, Confluence, IntelliJ IDEA, Eclipse, VS Code</li>
-      </ul>
-    </section>
+  <section>
+    <h3>Tech Stack</h3>
+    <ul>
+      <li><strong>Programming:</strong> Java, Python, SQL, JavaScript, Shell Scripting</li>
+      <li><strong>Cloud & DB:</strong> AWS (EC2, Lambda, S3, RDS), MySQL, PostgreSQL, MongoDB</li>
+      <li><strong>Microservices & DevOps:</strong> Spring Boot, Docker, Kubernetes, OpenShift, Jenkins</li>
+      <li><strong>Frontend:</strong> React, Angular, Vue.js</li>
+      <li><strong>Monitoring & CI/CD:</strong> Splunk, Dynatrace, GitHub Actions</li>
+    </ul>
+  </section>
 
-    <section class="experience">
-      <h2>Professional Experience</h2>
+  <section>
+    <h3>Work Experience</h3>
+    <p class="subheading">Senior Java Developer – Ventois Inc (ZipCar, Charter)</p>
+    <p>Jan 2022 – Present</p>
+    <ul>
+      <li>Built scalable RESTful microservices using Java 11, Spring Boot, and Kafka</li>
+      <li>Deployed services on OpenShift and Kubernetes clusters</li>
+      <li>Integrated CI/CD with GitHub Actions and Jenkins</li>
+    </ul>
 
-      <div class="job">
-        <h3>Senior Software Developer – Ventois Inc (ZipCar)</h3>
-        <p class="date">May 2024 – Present</p>
-        <p>Developed RESTful APIs with Spring Boot and Kafka; improved throughput by 25%. Managed CI/CD pipelines with Jenkins and Git. Integrated Hibernate with Oracle and PostgreSQL. Supported QA and production monitoring with Splunk and Dynatrace.</p>
-      </div>
+    <p class="subheading">Java Developer – Winsun Global Tech (HCL)</p>
+    <p>2019 – 2021</p>
+    <ul>
+      <li>Worked on enterprise applications using Dropwizard, JPA, and Hibernate</li>
+      <li>Followed BDD using Cucumber and TestNG</li>
+    </ul>
+  </section>
 
-      <div class="job">
-        <h3>Senior Software Developer – Ventois Inc (Charter Communications)</h3>
-        <p class="date">Sep 2022 – May 2024</p>
-        <p>Refactored legacy systems into microservices with Spring Boot and Kafka. Led cloud deployments on AWS. Automated CI/CD with Jenkins and GitHub Actions. Implemented OAuth 2.0, JWT, Spring Security, and containerized microservices using Docker and Kubernetes.</p>
-      </div>
+  <section>
+    <h3>Education</h3>
+    <p><strong>Master of Computer Science</strong> – Fitchburg State University, USA</p>
+    <p><strong>Bachelor of Computer Science</strong> – Karnataka University, India</p>
+  </section>
 
-      <div class="job">
-        <h3>Software Developer – Winsun Global Tech (HCL Technologies)</h3>
-        <p class="date">Jun 2014 – Jan 2019</p>
-        <p>Full SDLC involvement building enterprise apps. Developed REST APIs, optimized DB with Hibernate, integrated SOAP services, and implemented secure SSO authentication.</p>
-      </div>
-    </section>
+  <section>
+    <h3>Certifications</h3>
+    <ul>
+      <li>AWS Certified Developer – Associate</li>
+      <li>Scrum Fundamentals Certified</li>
+    </ul>
+  </section>
 
-    <section class="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Master's in Computer Science – Fitchburg State University, MA, USA (May 2022)</li>
-        <li>Bachelor of Computer Application – Karnataka University, Dharwad, India (June 2014)</li>
-      </ul>
-    </section>
-  </main>
+  <section>
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:vidyaraniuppin1992@gmail.com">vidyaraniuppin1992@gmail.com</a></p>
+    <p>Phone: 508-314-6175</p>
+    <p>Website: <a href="https://vidyaraniuppin.github.io" target="_blank">vidyaraniuppin.github.io</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/vidyaraniuppin" target="_blank">linkedin.com/in/vidyaraniuppin</a></p>
+  </section>
 
   <footer>
-    &copy; 2025 Vidyarani Ishwar Uppin. All rights reserved.
+    <p>&copy; 2025 Vidyarani Ishwar Uppin. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
