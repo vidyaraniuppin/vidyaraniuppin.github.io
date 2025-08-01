@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vidyarani Uppin | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -47,7 +47,7 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 960px;
       margin: 40px auto;
       padding: 0 20px;
     }
@@ -92,8 +92,73 @@
       text-decoration: underline;
     }
 
-    .contact-links p {
-      margin: 6px 0;
+    .skills-section {
+      margin: 50px 0;
+      text-align: center;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .skill img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+      transition: transform 0.4s ease, filter 0.3s ease;
+    }
+
+    .skill p {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 0;
+      color: #333;
+    }
+
+    .skill:hover img {
+      transform: scale(1.2) rotate(5deg);
+      filter: brightness(1.2);
+    }
+
+    .skill:hover {
+      animation: bounce 0.4s ease-in-out;
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    .portfolio-link {
+      margin-top: 30px;
+    }
+
+    .portfolio-link a {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #004aad;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-link a:hover {
+      border-color: #004aad;
+      color: #002f6c;
     }
 
     footer {
@@ -125,76 +190,6 @@
         padding: 0 15px;
       }
     }
-
-    .skills-section {
-  margin: 50px 0;
-  text-align: center;
-}
-
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-  justify-items: center;
-  align-items: center;
-}
-
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.skill img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-  transition: transform 0.4s ease, filter 0.3s ease;
-}
-
-.skill p {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 0;
-  color: #333;
-}
-
-.skill:hover img {
-  transform: scale(1.2) rotate(5deg);
-  filter: brightness(1.2);
-}
-
-.skill:hover {
-  animation: bounce 0.4s ease-in-out;
-}
-
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
-}
-
-.portfolio-link {
-  margin-top: 30px;
-}
-
-.portfolio-link a {
-  display: inline-block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #004aad;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.portfolio-link a:hover {
-  border-color: #004aad;
-  color: #002f6c;
-}
-
   </style>
 </head>
 <body>
@@ -223,45 +218,45 @@
         <li><strong>Monitoring & CI/CD:</strong> Splunk, Dynatrace, GitHub Actions</li>
       </ul>
     </section>
+
     <section class="skills-section">
-  <h3>Technical Skills</h3>
-  <div class="skill-grid">
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
-      <p>Java</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" />
-      <p>Spring Boot</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle DB" />
-      <p>Oracle DB</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Apache Kafka" />
-      <p>Kafka</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
-      <p>Git</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" />
-      <p>Jira</p>
-    </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" />
-      <p>Jenkins</p>
-    </div>
-  </div>
+      <h3>Technical Skills (Visual)</h3>
+      <div class="skill-grid">
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+          <p>Java</p>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" />
+          <p>Spring Boot</p>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle DB" />
+          <p>Oracle DB</p>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka" />
+          <p>Apache Kafka</p>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+          <p>Git</p>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" />
+          <p>Jira</p>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" />
+          <p>Jenkins</p>
+        </div>
+      </div>
 
-  <div class="portfolio-link">
-    <p>Explore my GitHub Portfolio:</p>
-    <a href="https://github.com/vidyaraniuppin" target="_blank">github.com/vidyaraniuppin</a>
-  </div>
-</section>
-
+      <div class="portfolio-link">
+        <p>Explore my GitHub Portfolio:</p>
+        <a href="https://github.com/vidyaraniuppin" target="_blank">github.com/vidyaraniuppin</a>
+      </div>
+    </section>
 
     <section>
       <h3>Work Experience</h3>
@@ -298,12 +293,10 @@
 
     <section>
       <h3>Contact</h3>
-      <div class="contact-links">
-        <p>Email: <a href="mailto:vidyaraniuppin1992@gmail.com">vidyaraniuppin1992@gmail.com</a></p>
-        <p>Phone: 508-314-6175</p>
-        <p>Website: <a href="https://vidyaraniuppin.github.io" target="_blank">vidyaraniuppin.github.io</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/vidyaraniuppin" target="_blank">linkedin.com/in/vidyaraniuppin</a></p>
-      </div>
+      <p>Email: <a href="mailto:vidyaraniuppin1992@gmail.com">vidyaraniuppin1992@gmail.com</a></p>
+      <p>Phone: 508-314-6175</p>
+      <p>Website: <a href="https://vidyaraniuppin.github.io" target="_blank">vidyaraniuppin.github.io</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/vidyaraniuppin" target="_blank">linkedin.com/in/vidyaraniuppin</a></p>
     </section>
   </main>
 
