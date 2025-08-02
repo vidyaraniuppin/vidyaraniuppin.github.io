@@ -103,13 +103,59 @@
       margin-bottom: 50px;
     }
 
-    #about p {
-      max-width: 720px;
-      color: #444;
-      font-size: 1.1rem;
-      margin-bottom: 18px;
-    }
+    #about-me p {
+    margin-bottom: 1.8rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    position: relative;
+  }
 
+  /* Slightly uneven spacing for a fun effect */
+  #about-me p:nth-child(odd) {
+    letter-spacing: 0.08em;
+  }
+
+  /* Emphasis with fun colors and shadows */
+  #about-me strong {
+    color: #ff6f61;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px #ffdede;
+  }
+
+  /* Tech highlight styles */
+  .java { color: #f89820; font-weight: 900; text-shadow: 1px 1px 2px #fce3b7;}
+  .spring { color: #6db33f; font-weight: 900; text-shadow: 1px 1px 2px #c7e9a9;}
+  .aws { color: #ff9900; font-weight: 900; text-shadow: 1px 1px 2px #ffe2aa;}
+  .docker { color: #2496ed; font-weight: 900; text-shadow: 1px 1px 2px #a3cef7;}
+  .k8s { color: #326ce5; font-weight: 900; text-shadow: 1px 1px 2px #a9bbf2;}
+  .jenkins { color: #d24939; font-weight: 900; text-shadow: 1px 1px 2px #f9b2ab;}
+  .postgres { color: #336791; font-weight: 900; text-shadow: 1px 1px 2px #a6caea;}
+  .reactjs { color: #61dafb; font-weight: 900; text-shadow: 1px 1px 2px #c3ecff;}
+  .security { color: #d9534f; font-weight: 900; text-shadow: 1px 1px 2px #f9b2ab;}
+
+  /* Icons bigger with margin */
+  i.fa-brands {
+    font-size: 1.6rem;
+    margin-right: 10px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.15));
+  }
+
+  /* Emojis bigger and spaced */
+  .emoji {
+    font-size: 1.7rem;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  /* Highlight background for important phrases */
+  .highlight {
+    background: #fffae6;
+    border-radius: 8px;
+    padding: 0 8px;
+    box-shadow: 1px 2px 6px rgba(255,111,97,0.15);
+  }
     .skills-section {
       margin: 50px 0;
       text-align: center;
@@ -615,12 +661,35 @@
   </header>
 
   <main>
-    <section id="about" class="boxed-section">
-      <h3>About Me</h3>
-      <p>Hello! 👋 I'm Vidyarani, a Senior Java Developer with over 7 years of experience in building scalable backend services and full-stack web applications.</p>
-      <p>Currently working at Ventois Inc (clients: ZipCar and Charter Communications), I specialize in Java, Spring Boot, REST APIs, Microservices, Kafka, AWS, Docker, and Kubernetes.</p>
-      <p>I’m passionate about cloud-native development, automation, and writing clean, maintainable code. I recently earned my AWS Certified Developer – Associate credential.</p>
-    </section>
+    <section id="about-me" class="boxed-section">
+  <p><span class="emoji">👋</span> Hi, I’m <strong>Vidyarani Uppin</strong>, a passionate <span class="highlight">Senior Java Developer</span> with over <strong>9 years</strong> of experience building scalable, enterprise-grade applications from the ground up.</p>
+
+  <p>I specialize in 
+    <i class="fa-brands fa-java java"></i><span class="java">Java</span>, 
+    <i class="fa-brands fa-spring spring"></i><span class="spring">Spring Boot</span>, 
+    <span class="highlight">Microservices</span>, and 
+    <i class="fa-brands fa-aws aws"></i><span class="aws">Cloud-native</span> development across 
+    <strong>AWS</strong>, 
+    <strong>Azure</strong>, and 
+    <strong>GCP</strong> platforms. My work spans the full <strong>SDLC</strong> — from gathering requirements to deployment and long-term maintenance.
+  </p>
+
+  <p>Currently at <strong>Charter Communications</strong>, I’m modernizing legacy systems and building <span class="highlight">event-driven microservices</span> using <span class="emoji">☕️</span> Kafka, <strong>gRPC</strong>, and <strong>Spring Cloud</strong>. I've also developed <span class="security">secure APIs</span> with <span class="emoji">🔐</span> OAuth2, JWT, and Spring Security.</p>
+
+  <p>My recent work includes integrating Kafka Streams, containerizing services with 
+    <i class="fa-brands fa-docker docker"></i><span class="docker">Docker</span>, and deploying on 
+    <i class="fa-brands fa-kubernetes k8s"></i><span class="k8s">Kubernetes</span> in a hybrid cloud setup. I also collaborate on <strong>CI/CD pipelines</strong> using 
+    <i class="fa-brands fa-jenkins jenkins"></i><span class="jenkins">Jenkins</span>, GitHub Actions, and <strong>Terraform</strong> for infrastructure as code.
+  </p>
+
+  <p>On the database side, I’ve optimized performance with <span class="emoji">🐘</span> <span class="postgres">PostgreSQL</span>, <strong>Oracle</strong>, and <strong>Hibernate</strong>, refactoring JDBC code and implementing caching strategies for faster response times.</p>
+
+  <p>Beyond the backend, I’ve contributed to frontend modules with <span class="emoji">⚛️</span> <span class="reactjs">ReactJS</span> and managed seamless API integration to deliver full-stack solutions.</p>
+
+  <p>I’m deeply invested in clean code, performance tuning, automation, and observability — using tools like <strong>Splunk</strong>, <strong>Dynatrace</strong>, and <strong>Log4j</strong> to monitor and maintain system health.</p>
+
+  <p>My approach combines hands-on engineering with architectural thinking — always aiming to build reliable, maintainable, and future-ready systems.</p>
+</section>
 
     <section class="detailed-tech-stack">
   <h3>Technical Proficiencies</h3>
