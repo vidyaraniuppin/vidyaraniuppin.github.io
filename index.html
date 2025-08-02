@@ -268,86 +268,76 @@
       /* same boxed-section style for consistency */
     }
 
-    #certification .certifications {
+    .cert-section {
+  padding: 40px 20px;
+  background: #f7f9fc;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.cert-section h3 {
+  font-size: 1.8rem;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cert-card {
   display: flex;
-  align-items: center;
-  gap: 30px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-#certification .certifications img {
-  width: 140px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 10px;
+  gap: 20px;
   background: #fff;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  cursor: pointer;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  flex-shrink: 0;
-}
-
-#certification .certifications img:hover {
-  transform: rotate(5deg) scale(1.1);
-  filter: brightness(1.1);
-}
-
-#certification .cert-details {
-  flex: 1;
-  color: #222;
-}
-
-#certification .cert-details h4 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-#certification .cert-details p {
-  font-size: 1rem;
-  margin: 6px 0;
-  color: #555;
-  line-height: 1.4;
-}
-
-.credly-link {
-  display: inline-flex;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 20px;
   align-items: center;
-  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.cert-left {
+  flex: 0 0 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cert-left img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cert-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.cert-right h4 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.cert-right p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 10px;
   color: #0073e6;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.credly-link:hover {
-  transform: scale(1.05);
-  color: #0051a8;
-}
-
-.credly-logo {
-  width: 28px;
-  height: 28px;
-  margin-right: 8px;
-  transition: transform 0.3s ease;
-}
-
-.credly-link:hover .credly-logo {
-  transform: rotate(12deg) scale(1.2);
-  filter: drop-shadow(0 0 5px #0073e6);
-}
-   @media (max-width: 600px) {
-  .certifications {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .cert-details {
-    margin-top: 15px;
-  }
+.cert-link:hover {
+  color: #0056b3;
 }
 
 
@@ -634,24 +624,24 @@
   </div>
 </section>
 
-   <section id="certification" class="boxed-section">
+   <section id="certification" class="cert-section">
   <h3>🏅 Certifications</h3>
-  <div class="certifications">
-    <img src="images/aws-badge.png" alt="AWS Certified Developer – Associate Badge" />
-    <div class="cert-details">
+  <div class="cert-card">
+    <div class="cert-left">
+      <img src="images/aws-badge.png" alt="AWS Badge" />
+    </div>
+    <div class="cert-right">
       <h4>AWS Certified Developer – Associate</h4>
       <p><strong>Issuer:</strong> Amazon Web Services</p>
-      <p><strong>Verification ID:</strong> DVA‑C02‑16CHARCODE1234</p>
-      <p>
-        Demonstrates ability to design, deploy, and debug cloud-based applications on AWS. Credential valid until 2028.
-      </p>
-      <a href="https://www.credly.com/earner/dashboard" target="_blank" class="credly-link">
-        <img src="images/credly-logo.svg" alt="View on Credly" class="credly-logo" />
-        <span>View on Credly</span>
+      <p><strong>ID:</strong> DVA‑C02‑16CHARCODE1234</p>
+      <p>Proficiency in developing, deploying, and debugging cloud-based applications using AWS tools and best practices.</p>
+      <a href="https://www.credly.com/badges/" target="_blank" class="cert-link">
+        🔗 View on Credly
       </a>
     </div>
   </div>
 </section>
+
 
 
     <section class="education-section">
