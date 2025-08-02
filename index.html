@@ -450,18 +450,43 @@
       filter: drop-shadow(0 0 5px #0073e6);
     }
 
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+}
+
+.cert-badge {
+  width: 90px;
+  max-height: 90px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.cert-details {
+  flex: 1;
+}
+
 @media (max-width: 600px) {
   .cert-item {
     flex-direction: column;
     text-align: center;
   }
+
   .cert-badge {
     margin-bottom: 15px;
   }
+
   .cert-details {
     padding-left: 0;
   }
 }
+
 .credly-link {
   display: inline-flex;
   align-items: center;
@@ -723,22 +748,20 @@
    <section id="certification" class="boxed-section">
   <h3>🏅 Certifications</h3>
   <div class="cert-grid">
-    <div class="cert-item">
-      <img src="images/aws-badge.png" alt="AWS Certified Developer – Associate Badge" class="cert-badge" />
-      <div class="cert-details">
-        <h4>AWS Certified Developer – Associate</h4>
-        <p><strong>Issuer:</strong> Amazon Web Services</p>
-        <p><strong>Verification ID:</strong> DVA‑C02‑16CHARCODE1234</p>
-        <p class="cert-desc">
-          Demonstrates ability to design, deploy, and debug cloud-based applications on AWS. Credential valid until 2028.
-        </p>
-        <a href="https://www.credly.com/earner/dashboard" target="_blank" class="credly-link">
-          <img src="images/credly-logo.svg" alt="View on Credly" class="credly-logo" />
-          <span>View on Credly</span>
-        </a>
-      </div>
+  <div class="cert-item">
+    <img src="images/aws-badge.png" alt="AWS Badge" class="cert-badge" />
+    <div class="cert-details">
+      <h4>AWS Certified Developer – Associate</h4>
+      <p><strong>Issuer:</strong> Amazon Web Services</p>
+      <p><strong>Verification ID:</strong> DVA‑C02‑XXXX</p>
+      <p class="cert-desc">Credential valid until 2028.</p>
+      <a href="https://www.credly.com" target="_blank" class="credly-link">
+        <img src="images/credly-logo.svg" alt="Credly" class="credly-logo" />
+        <span>View on Credly</span>
+      </a>
     </div>
   </div>
+</div>
 </section>
 
     <section class="education-section">
