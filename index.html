@@ -653,43 +653,123 @@
   </div>
 </section>
 
-    <section id="contact" class="bg-gradient-to-tr from-indigo-100 via-pink-100 to-yellow-100 py-16 px-6">
-  <div class="max-w-3xl mx-auto bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-10">
-    <h2 class="text-4xl font-bold text-center text-indigo-700 mb-4">Let's Get In Touch!</h2>
-    <p class="text-center text-gray-700 text-lg mb-10">
-      Come say Hi! I'm always happy to hear feedback. <br/>
-      And hey, who doesn't like free movie/book recommendations? 🎬📚
+    <section id="contact">
+  <div class="contact-container">
+    <h2>Let's Get In Touch!</h2>
+    <p>
+      Come say hi! I'm always open to feedback, collaboration, or just sharing book/movie picks 🎬📖
     </p>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Your full name" required />
 
-    <form class="space-y-6">
-      <div>
-        <label class="block text-lg font-medium text-gray-800">Full Name</label>
-        <input type="text" placeholder="Your full name" class="mt-2 w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-indigo-400 shadow-sm" />
-      </div>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
 
-      <div>
-        <label class="block text-lg font-medium text-gray-800">Email Address</label>
-        <input type="email" placeholder="you@example.com" class="mt-2 w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-pink-400 shadow-sm" />
-      </div>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="123-456-7890" />
 
-      <div>
-        <label class="block text-lg font-medium text-gray-800">Phone Number</label>
-        <input type="tel" placeholder="(123) 456-7890" class="mt-2 w-full p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-yellow-400 shadow-sm" />
-      </div>
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" placeholder="Say hello..." required></textarea>
 
-      <div>
-        <label class="block text-lg font-medium text-gray-800">Message</label>
-        <textarea rows="5" placeholder="Say Hello..." class="mt-2 w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-400 shadow-sm"></textarea>
-      </div>
-
-      <div class="text-center pt-4">
-        <button type="submit" class="bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white font-bold py-3 px-10 rounded-full shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
-          Send Message 💌
-        </button>
-      </div>
+      <button type="submit">Send Message 💌</button>
     </form>
   </div>
 </section>
+
+<style>
+  #contact {
+    background: linear-gradient(to right, #fdf6f0, #f9e2d0);
+    padding: 60px 20px;
+  }
+
+  .contact-container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s;
+  }
+
+  .contact-container:hover {
+    transform: translateY(-3px);
+  }
+
+  .contact-container h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .contact-container p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #444;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fffaf5;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+
+  form input:focus,
+  form textarea:focus {
+    border-color: #ff9a8b;
+    box-shadow: 0 0 5px rgba(255, 154, 139, 0.4);
+    outline: none;
+  }
+
+  form button {
+    margin-top: 20px;
+    width: 100%;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 14px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+
+  form button:hover {
+    background: linear-gradient(to right, #ff6a4d, #ffa76d);
+    transform: scale(1.02);
+  }
+
+  @media screen and (max-width: 500px) {
+    .contact-container {
+      padding: 30px 20px;
+    }
+
+    .contact-container h2 {
+      font-size: 1.6rem;
+    }
+
+    form button {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+
 
 
   
