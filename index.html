@@ -268,76 +268,78 @@
       /* same boxed-section style for consistency */
     }
 
-   .cert-section {
-  padding: 40px 20px;
-  background: #f7f9fc;
-  border-radius: 12px;
-  margin: 40px auto;
-  max-width: 800px;
-}
-
-.cert-section h3 {
-  font-size: 1.8rem;
-  color: #003366;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.cert-card {
+  .certifications {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  padding: 20px;
-  align-items: center;
+  margin-top: 20px;
   flex-wrap: wrap;
 }
 
-.cert-left {
-  flex: 0 0 120px;
+.cert-badge-container {
+  flex: 0 0 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.cert-left img {
-  width: 100px;
+.cert-badge-container img {
+  max-width: 100px;
   height: auto;
   border-radius: 8px;
   background-color: #fff;
   padding: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.cert-right {
+.cert-details {
   flex: 1;
   min-width: 250px;
 }
 
-.cert-right h4 {
-  margin: 0;
-  font-size: 1.3rem;
-  color: #1a1a1a;
+.cert-details h4 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  color: #003366;
 }
 
-.cert-right p {
-  margin: 6px 0;
+.cert-details p {
+  margin: 4px 0;
   font-size: 0.95rem;
   color: #333;
 }
 
-.cert-link {
-  display: inline-block;
-  margin-top: 10px;
+.credly-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  text-decoration: none;
   color: #0073e6;
   font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.cert-link:hover {
+.credly-link:hover {
+  transform: scale(1.05);
   color: #0056b3;
+}
+
+.credly-logo {
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+  .certifications {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cert-details {
+    margin-top: 15px;
+  }
 }
 
 
@@ -624,23 +626,27 @@
   </div>
 </section>
 
-  <section id="certification" class="cert-section">
+ <section id="certification" class="boxed-section">
   <h3>🏅 Certifications</h3>
-  <div class="cert-card">
-    <div class="cert-left">
-      <img src="images/aws-badge.png" alt="AWS Badge" />
+  <div class="certifications">
+    <div class="cert-badge-container">
+      <img src="images/aws-badge.png" alt="AWS Certified Developer – Associate Badge" />
     </div>
-    <div class="cert-right">
+    <div class="cert-details">
       <h4>AWS Certified Developer – Associate</h4>
       <p><strong>Issuer:</strong> Amazon Web Services</p>
-      <p><strong>ID:</strong> DVA‑C02‑16CHARCODE1234</p>
-      <p>Proficiency in developing, deploying, and debugging cloud-based applications using AWS tools and best practices.</p>
-      <a href="https://www.credly.com/badges/" target="_blank" class="cert-link">
-        🔗 View on Credly
+      <p><strong>Verification ID:</strong> DVA‑C02‑16CHARCODE1234</p>
+      <p>
+        Demonstrates ability to develop, deploy, and debug cloud-based applications using AWS tools and best practices.
+      </p>
+      <a href="https://www.credly.com/badges/" target="_blank" class="credly-link">
+        <img src="images/credly-logo.svg" alt="View on Credly" class="credly-logo" />
+        <span>View on Credly</span>
       </a>
     </div>
   </div>
 </section>
+
 
 
     <section class="education-section">
