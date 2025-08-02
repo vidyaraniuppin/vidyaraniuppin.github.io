@@ -2,703 +2,771 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vidyarani Uppin | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* Reset & Global */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body {
+    * {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0f2027;  /* dark gradient base */
-      background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-      color: #f0f0f0;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      scroll-behavior: smooth;
-    }
-    a {
-      color: #ff6e7f;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover, a:focus {
-      color: #ff9a8b;
-      outline: none;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
     }
 
-    /* Container */
-    main {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px 60px;
+    body {
+      background-color: #f4f7fa;
+      color: #333;
+      line-height: 1.7;
     }
 
-    /* Header */
     header {
-      background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%);
-      padding: 60px 20px;
+      background-color: #004aad;
+      color: white;
+      padding: 50px 20px;
       text-align: center;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(255, 110, 127, 0.3);
-      margin: 20px;
-      color: #fff;
     }
+
     .profile-pic {
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      border: 5px solid #fff;
+      border: 5px solid white;
       object-fit: cover;
       margin-bottom: 20px;
-      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-      transition: transform 0.4s ease;
-      cursor: pointer;
     }
-    .profile-pic:hover {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 6px 25px rgba(255, 110, 127, 0.6);
-    }
+
     header h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      text-shadow: 0 2px 8px rgba(255, 110, 127, 0.7);
+      font-size: 2.2rem;
+      font-weight: 800;
     }
+
     header h2 {
+      font-size: 1.1rem;
       font-weight: 400;
-      font-size: 1.3rem;
-      letter-spacing: 0.07em;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      margin-top: 8px;
     }
 
-    /* Section Titles */
-    h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 24px;
-      position: relative;
-      padding-bottom: 8px;
-      color: #ff6e7f;
-    }
-    h3::after {
-      content: "";
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(90deg, #ff758c, #ff7eb3);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-radius: 4px;
+    main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    /* Boxes */
-    .boxed-section {
-      background: linear-gradient(145deg, #162a47, #1b406f);
-      padding: 30px 35px;
-      border-radius: 18px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    section {
       margin-bottom: 50px;
-      transition: transform 0.4s ease;
-    }
-    .boxed-section:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 60px rgba(255, 110, 127, 0.4);
     }
 
-    /* About Section */
-    #about p {
-      font-size: 1.15rem;
-      max-width: 720px;
-      margin-bottom: 18px;
-      color: #e0e0e0;
-      line-height: 1.7;
+    h3 {
+      color: #004aad;
+      margin-bottom: 15px;
+      font-size: 1.7rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 6px;
     }
 
-    /* Technical Proficiencies */
-    .tech-category {
-      margin-bottom: 30px;
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
     }
-    .tech-category h4 {
-      font-size: 1.25rem;
-      margin-bottom: 8px;
-      color: #ff9a8b;
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .subheading {
       font-weight: 600;
-    }
-    .tech-category p {
-      font-size: 1rem;
-      color: #ccc;
-      background: rgba(255, 110, 127, 0.1);
-      border-left: 4px solid #ff758c;
-      padding: 10px 15px;
-      border-radius: 6px;
-      max-width: 920px;
-      line-height: 1.5;
-      font-weight: 500;
+      margin-top: 20px;
+      color: #222;
     }
 
-    /* Skills Grid */
-    .skills-section {
-      text-align: center;
-      margin-top: 40px;
+    p {
+      margin-bottom: 10px;
     }
+
+    a {
+      color: #004aad;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .skills-section {
+      margin: 50px 0;
+      text-align: center;
+    }
+
     .skill-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 25px;
       margin-top: 30px;
       justify-items: center;
       align-items: center;
     }
+
     .skill {
-      background: linear-gradient(145deg, #223a5e, #324f7a);
-      border-radius: 16px;
-      padding: 20px 15px;
-      width: 110px;
-      cursor: default;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
-    .skill:hover {
-      transform: scale(1.15) rotate(5deg);
-      box-shadow: 0 15px 40px rgba(255, 110, 127, 0.6);
-      background: linear-gradient(145deg, #ff758c, #ff7eb3);
-      color: #fff;
-    }
+
     .skill img {
-      width: 55px;
-      height: 55px;
-      margin-bottom: 12px;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
-      transition: filter 0.3s ease;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+      transition: transform 0.4s ease, filter 0.3s ease;
     }
-    .skill:hover img {
-      filter: drop-shadow(0 0 8px #fff);
-    }
+
     .skill p {
+      font-size: 0.9rem;
       font-weight: 600;
-      font-size: 0.95rem;
+      margin: 0;
+      color: #333;
     }
 
-    /* Work Experience */
-    .experience-section {
-      margin-top: 50px;
-    }
-    .company-card {
-      background: linear-gradient(135deg, #1b2e4b, #274678);
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      padding: 20px 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-      transition: transform 0.3s ease;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .company-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 20px 45px rgba(255, 110, 127, 0.5);
-    }
-    .company-logo {
-      width: 90px;
-      flex-shrink: 0;
-      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.6));
-      border-radius: 12px;
-      transition: transform 0.4s ease;
-      cursor: pointer;
-    }
-    .company-logo:hover {
-      transform: rotate(8deg) scale(1.1);
-      filter: drop-shadow(0 0 12px #ff758c);
-    }
-    .company-content {
-      flex: 1 1 480px;
-      color: #ddd;
-    }
-    .company-content h4 {
-      color: #ff9a8b;
-      margin-bottom: 14px;
-      font-weight: 700;
-      font-size: 1.3rem;
-    }
-    .company-content ul {
-      padding-left: 20px;
-    }
-    .company-content li {
-      margin-bottom: 8px;
-      font-weight: 500;
-      font-size: 1rem;
-      line-height: 1.5;
+    .skill:hover img {
+      transform: scale(1.2) rotate(5deg);
+      filter: brightness(1.2);
     }
 
-    /* Education Section */
-    .education-section {
-      margin-top: 50px;
-    }
-    .edu-card {
-      background: linear-gradient(135deg, #1a2944, #243c6a);
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      padding: 20px 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      gap: 20px;
-      flex-wrap: wrap;
-      transition: transform 0.3s ease;
-    }
-    .edu-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 20px 45px rgba(255, 110, 127, 0.6);
-    }
-    .edu-logo {
-      width: 90px;
-      flex-shrink: 0;
-      border-radius: 12px;
-      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.6));
-      transition: transform 0.6s ease;
-      cursor: pointer;
-    }
-    .edu-logo:hover {
-      transform: rotate(360deg) scale(1.1);
-      filter: drop-shadow(0 0 12px #ff758c);
-    }
-    .edu-content {
-      color: #ddd;
-      flex: 1 1 480px;
-    }
-    .edu-content h4 {
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-      font-weight: 700;
-      color: #ff9a8b;
-    }
-    .edu-content p {
-      font-size: 1rem;
-      font-weight: 500;
-      margin: 6px 0;
+    .skill:hover {
+      animation: bounce 0.4s ease-in-out;
     }
 
-    /* Certifications Section */
-    #certification {
-      margin-top: 50px;
-    }
-    #certification .certifications {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      background: linear-gradient(145deg, #223a5e, #324f7a);
-      border-radius: 18px;
-      padding: 30px 35px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    #certification .certifications img {
-      width: 160px;
-      border-radius: 16px;
-      cursor: pointer;
-      transition: transform 0.4s ease, filter 0.4s ease;
-      filter: drop-shadow(0 0 8px rgba(255, 110, 127, 0.7));
-    }
-    #certification .certifications img:hover {
-      transform: rotate(8deg) scale(1.15);
-      filter: drop-shadow(0 0 15px #ff758c);
-    }
-    #certification .cert-details {
-      flex: 1 1 320px;
-      color: #eee;
-      padding-left: 15px;
-    }
-    #certification .cert-details h4 {
-      font-size: 1.6rem;
-      margin-bottom: 14px;
-      font-weight: 700;
-      color: #ff6e7f;
-      text-shadow: 0 1px 6px rgba(255,110,127,0.7);
-    }
-    #certification .cert-details p {
-      font-size: 1.05rem;
-      margin: 6px 0;
-      font-weight: 500;
-      line-height: 1.5;
-    }
-    .credly-link {
-      display: inline-flex;
-      align-items: center;
-      margin-top: 20px;
-      font-weight: 600;
-      color: #ff9a8b;
-      cursor: pointer;
-      user-select: none;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-    .credly-link:hover {
-      color: #fff;
-      transform: scale(1.1);
-    }
-    .credly-logo {
-      width: 30px;
-      height: 30px;
-      margin-right: 10px;
-      filter: drop-shadow(0 0 3px #ff758c);
-      transition: transform 0.3s ease;
-    }
-    .credly-link:hover .credly-logo {
-      transform: rotate(15deg) scale(1.3);
-      filter: drop-shadow(0 0 12px #ff758c);
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
     }
 
-    /* Contact Section */
-    #contact {
-      background: linear-gradient(90deg, #ff758c, #ff7eb3);
-      padding: 60px 20px;
-      border-radius: 22px;
-      box-shadow: 0 20px 50px rgba(255, 110, 127, 0.5);
-      margin-top: 60px;
-      color: #fff;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .contact-container h2 {
-      font-size: 2.4rem;
-      margin-bottom: 12px;
-      font-weight: 700;
-      text-align: center;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    .contact-container p {
-      font-weight: 500;
-      font-size: 1.1rem;
-      margin-bottom: 32px;
-      text-align: center;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    }
-    form label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 6px;
-      font-size: 1rem;
-      color: #fff;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-    }
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 14px 18px;
-      border-radius: 10px;
-      border: none;
-      font-size: 1rem;
-      margin-bottom: 20px;
-      font-family: 'Poppins', sans-serif;
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-      box-shadow: inset 0 0 8px rgba(255,255,255,0.25);
-      transition: background 0.3s ease;
-      resize: vertical;
-    }
-    form input::placeholder,
-    form textarea::placeholder {
-      color: #ffe3e8cc;
-    }
-    form input:focus,
-    form textarea:focus {
-      background: rgba(255, 255, 255, 0.3);
-      outline: none;
-      box-shadow: 0 0 10px 3px #ff6e7f;
-      color: #fff;
-    }
-    form button {
-      width: 100%;
-      background: #fff;
-      color: #ff6e7f;
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 16px;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(255, 110, 127, 0.5);
-      transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    }
-    form button:hover,
-    form button:focus {
-      background: #ff6e7f;
-      color: #fff;
-      transform: scale(1.05);
-      outline: none;
-      box-shadow: 0 8px 30px rgba(255, 110, 127, 0.8);
+    .portfolio-link {
+      margin-top: 30px;
     }
 
-    /* Footer */
+    .portfolio-link a {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #004aad;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-link a:hover {
+      border-color: #004aad;
+      color: #002f6c;
+    }
+
     footer {
       text-align: center;
       padding: 25px 15px;
-      color: #eee;
-      font-weight: 500;
-      font-size: 0.95rem;
-      margin-top: 40px;
-      user-select: none;
-      letter-spacing: 0.05em;
+      background-color: #004aad;
+      color: white;
     }
 
-    /* Responsive */
-    @media (max-width: 720px) {
-      main {
-        margin: 20px auto;
-      }
-      header {
-        margin: 15px;
-        padding: 40px 15px;
-      }
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header h2 {
-        font-size: 1.1rem;
-      }
+    @media (max-width: 600px) {
       .profile-pic {
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
       }
-      .skill-grid {
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-        gap: 20px;
+
+      header h1 {
+        font-size: 1.6rem;
       }
-      .skill {
-        width: 90px;
-        padding: 18px 12px;
+
+      header h2 {
+        font-size: 0.95rem;
       }
-      .company-card,
-      .edu-card {
-        flex-direction: column;
-        text-align: center;
+
+      h3 {
+        font-size: 1.4rem;
       }
-      .company-logo,
-      .edu-logo {
-        margin: 0 auto 15px;
-      }
-      .company-content,
-      .edu-content {
-        flex: unset;
-      }
-      #certification .certifications {
-        flex-direction: column;
-      }
-      #certification .cert-details {
-        padding-left: 0;
-        margin-top: 20px;
-        text-align: center;
-      }
-      #contact {
-        max-width: 90vw;
-        padding: 40px 20px;
+
+      main {
+        padding: 0 15px;
       }
     }
+    .detailed-tech-stack {
+  margin: 40px 0;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.detailed-tech-stack h3 {
+  font-size: 1.9rem;
+  color: #004aad;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tech-category {
+  margin-bottom: 25px;
+}
+
+.tech-category h4 {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.tech-category p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+  padding-left: 10px;
+  border-left: 3px solid #004aad;
+  background-color: #f9fbfd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .detailed-tech-stack h3 {
+    font-size: 1.5rem;
+  }
+
+  .tech-category h4 {
+    font-size: 1rem;
+  }
+
+  .tech-category p {
+    font-size: 0.9rem;
+  }
+}
+.experience-section {
+  margin: 50px 0;
+}
+
+.experience-section h3 {
+  font-size: 1.9rem;
+  color: #004aad;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.company-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+
+.company-card:hover {
+  transform: scale(1.01);
+}
+
+.company-logo {
+  width: 80px;
+  margin-right: 20px;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+.company-content h4 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  color: #004aad;
+}
+
+.company-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.company-content li {
+  margin-bottom: 8px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.company-logo.hcl:hover {
+  animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px) scale(1.1); }
+}
+
+.education-section {
+  margin: 50px 0;
+}
+
+.education-section h3 {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+.edu-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+.edu-card:hover {
+  transform: scale(1.02);
+}
+
+.edu-logo {
+  width: 80px;
+  margin-right: 20px;
+  transition: transform 0.5s;
+}
+
+.edu-logo.fitchburg:hover {
+  transform: rotate(360deg) scale(1.1);
+}
+.edu-logo.karnatak:hover {
+  animation: bounce 0.6s ease-in-out;
+}
+
+.edu-content h4 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.edu-content p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px) scale(1.05); }
+}
+   .cert-section {
+  margin: 60px 0;
+}
+.cert-section h3 {
+  font-size: 2rem;
+  color: #004aad;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+.cert-section h3::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #004aad;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  max-width: 720px;
+  width: 100%;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cert-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.cert-badge {
+  width: 110px;
+  flex-shrink: 0;
+  transition: transform 0.6s, filter 0.6s, box-shadow 0.6s;
+}
+.cert-badge:hover {
+  transform: rotate(5deg) scale(1.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
+}
+
+.cert-details {
+  padding-left: 25px;
+}
+.cert-details h4 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #222;
+}
+.cert-details p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 1rem;
+}
+.cert-desc {
+  margin-top: 8px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .cert-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cert-badge {
+    margin-bottom: 15px;
+  }
+  .cert-details {
+    padding-left: 0;
+  }
+}
+.credly-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s;
+}
+
+.credly-link:hover {
+  transform: scale(1.05);
+  color: #0051a8;
+}
+
+.credly-logo {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.credly-link:hover .credly-logo {
+  transform: rotate(10deg) scale(1.2);
+  filter: drop-shadow(0 0 4px #0073e6);
+}
+#contact {
+    background: linear-gradient(to right, #fdf6f0, #f9e2d0);
+    padding: 60px 20px;
+  }
+
+  .contact-container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s;
+  }
+
+  .contact-container:hover {
+    transform: translateY(-3px);
+  }
+
+  .contact-container h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .contact-container p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #444;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fffaf5;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+
+  form input:focus,
+  form textarea:focus {
+    border-color: #ff9a8b;
+    box-shadow: 0 0 5px rgba(255, 154, 139, 0.4);
+    outline: none;
+  }
+
+  form button {
+    margin-top: 20px;
+    width: 100%;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 14px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+
+  form button:hover {
+    background: linear-gradient(to right, #ff6a4d, #ffa76d);
+    transform: scale(1.02);
+  }
+
+  @media screen and (max-width: 500px) {
+    .contact-container {
+      padding: 30px 20px;
+    }
+
+    .contact-container h2 {
+      font-size: 1.6rem;
+    }
+
+    form button {
+      font-size: 0.95rem;
+    }
+  }
+    
   </style>
 </head>
 <body>
 
   <header>
     <img src="images/profile.jpg" alt="Vidyarani Uppin" class="profile-pic" />
-    <h1>Vidyarani Uppin</h1>
-    <h2>Full Stack Developer | Java | Spring Boot | React | AWS Enthusiast</h2>
+    <h1>Vidyarani Ishwar Uppin</h1>
+    <h2>Senior Java Developer | AWS Certified | Full Stack Engineer</h2>
   </header>
 
   <main>
-    <!-- About Section -->
-    <section id="about" class="boxed-section">
+    <section>
       <h3>About Me</h3>
-      <p>Hello! I am Vidyarani Uppin, a passionate software developer with over 10 years of experience building web applications and microservices. I specialize in Java and Spring Boot for backend development and React for frontend. I love crafting clean, performant, and user-friendly solutions deployed on cloud platforms like AWS.</p>
-      <p>My background includes working with distributed systems, event-driven architecture using Kafka, and container orchestration with Kubernetes. I enjoy continuous learning and mentoring junior developers.</p>
+      <p>Hello! 👋 I'm Vidyarani, a Senior Java Developer with over 7 years of experience in building scalable backend services and full-stack web applications.</p>
+      <p>Currently working at Ventois Inc (clients: ZipCar and Charter Communications), I specialize in Java, Spring Boot, REST APIs, Microservices, Kafka, AWS, Docker, and Kubernetes.</p>
+      <p>I’m passionate about cloud-native development, automation, and writing clean, maintainable code. I recently earned my AWS Certified Developer – Associate credential.</p>
     </section>
 
-    <!-- Technical Proficiencies -->
-    <section class="boxed-section">
-      <h3>Technical Proficiencies</h3>
+    <section class="detailed-tech-stack">
+  <h3>Technical Proficiencies</h3>
 
-      <div class="tech-category">
-        <h4>Programming Languages:</h4>
-        <p>Java 8/11, JavaScript/TypeScript, SQL, Python</p>
-      </div>
+  <div class="tech-category">
+    <h4>💻 Languages & Backend Frameworks</h4>
+    <p>Java (7–11), Spring Boot, Spring MVC, REST APIs, Microservices, Apache Kafka, Hibernate, JPA, Multithreading, Dropwizard</p>
+  </div>
 
-      <div class="tech-category">
-        <h4>Frameworks & Libraries:</h4>
-        <p>Spring Boot, React, Node.js, Express, Redux</p>
-      </div>
+  <div class="tech-category">
+    <h4>🧪 Testing & Quality Assurance</h4>
+    <p>JUnit, Mockito, Cucumber, Postman, Swagger/OpenAPI, TestNG, TDD, BDD</p>
+  </div>
 
-      <div class="tech-category">
-        <h4>Cloud & DevOps:</h4>
-        <p>AWS (Lambda, S3, EC2, DynamoDB, API Gateway), Docker, Kubernetes, Jenkins, GitHub Actions</p>
-      </div>
+  <div class="tech-category">
+    <h4>☁️ Cloud & DevOps</h4>
+    <p>AWS (EC2, S3, RDS, DynamoDB, IAM, Lambda) — <strong>AWS Certified Developer – Associate</strong>, OpenShift, Docker, Kubernetes, Jenkins, GitHub Actions, GitLab CI/CD</p>
+  </div>
 
-      <div class="tech-category">
-        <h4>Databases:</h4>
-        <p>MySQL, PostgreSQL, MongoDB, Oracle</p>
-      </div>
+  <div class="tech-category">
+    <h4>🗄️ Databases & Persistence</h4>
+    <p>Oracle, PostgreSQL, MySQL, DynamoDB, PL/SQL</p>
+  </div>
 
-      <div class="tech-category">
-        <h4>Other Tools:</h4>
-        <p>Kafka, Redis, Terraform, Maven, Gradle, JUnit</p>
-      </div>
-    </section>
+  <div class="tech-category">
+    <h4>🎨 Frontend Technologies</h4>
+    <p>HTML5, CSS3, JavaScript, ReactJS, AngularJS, Node.js</p>
+  </div>
 
-    <!-- Skills Grid -->
+  <div class="tech-category">
+    <h4>📁 Version Control & Project Management</h4>
+    <p>Git, Bitbucket, Jira, Confluence</p>
+  </div>
+
+  <div class="tech-category">
+    <h4>🧰 IDEs & Developer Tools</h4>
+    <p>IntelliJ IDEA, Eclipse, Visual Studio Code</p>
+  </div>
+</section>
+
+
     <section class="skills-section">
-      <h3>Skills & Tools</h3>
+      <h3>Technical Skills (Visual)</h3>
       <div class="skill-grid">
-        <div class="skill" title="Java">
-          <img src="images/java_icon.png" alt="Java" />
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
           <p>Java</p>
         </div>
-        <div class="skill" title="Spring Boot">
-          <img src="images/spring_boot_icon.png" alt="Spring Boot" />
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" />
           <p>Spring Boot</p>
         </div>
-        <div class="skill" title="React">
-          <img src="images/react_icon.png" alt="React" />
-          <p>React</p>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle DB" />
+          <p>Oracle DB</p>
         </div>
-        <div class="skill" title="AWS">
-          <img src="images/aws_icon.png" alt="AWS" />
-          <p>AWS</p>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka" />
+          <p>Apache Kafka</p>
         </div>
-        <div class="skill" title="Docker">
-          <img src="images/docker_icon.png" alt="Docker" />
-          <p>Docker</p>
-        </div>
-        <div class="skill" title="Kubernetes">
-          <img src="images/kubernetes_icon.png" alt="Kubernetes" />
-          <p>Kubernetes</p>
-        </div>
-        <div class="skill" title="Kafka">
-          <img src="images/kafka_icon.png" alt="Kafka" />
-          <p>Kafka</p>
-        </div>
-        <div class="skill" title="Git">
-          <img src="images/git_icon.png" alt="Git" />
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
           <p>Git</p>
         </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" />
+          <p>Jira</p>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" />
+          <p>Jenkins</p>
+        </div>
       </div>
     </section>
 
-    <!-- Work Experience -->
     <section class="experience-section">
-      <h3>Work Experience</h3>
+  <h3>Work Experience</h3>
 
-      <div class="company-card">
-        <img src="images/cognizant_logo.png" alt="Cognizant Logo" class="company-logo" />
-        <div class="company-content">
-          <h4>Cognizant</h4>
-          <ul>
-            <li>Developed RESTful microservices using Spring Boot and Java 8/11 for car-sharing platform enhancements.</li>
-            <li>Implemented JWT authentication and OAuth2 for secure APIs.</li>
-            <li>Integrated Kafka for event-driven communication and notifications.</li>
-            <li>Collaborated with frontend team to integrate with React application.</li>
-          </ul>
-        </div>
+  <!-- Zipcar -->
+  <div class="company-card">
+    <img src="images/ZIPCAR_LOGO_URL.png" alt="Zipcar Logo" class="company-logo zipcar" />
+    <div class="company-content">
+      <h4>Zipcar (via Ventois Inc) – Senior Java Developer</h4>
+      <ul>
+        <li>Developed Spring Boot microservices and Kafka streams to handle 100K+ daily booking events with 30% improved API latency.</li>
+        <li>Enabled third‑party integrations for payments and GPS data via secure OAuth2/JWT flows.</li>
+        <li>Led CI/CD migration to GitHub Actions & Jenkins for streamlined production releases.</li>
+        <li>Optimized memory usage by 40% using JProfiler and JVM tuning based on production load tests.</li>
+        <li>Collaborated with Scrum teams (Jira, Confluence) to ensure sprint flow and quality delivery.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Charter Communications -->
+  <div class="company-card">
+    <img src="images/CHARTER_LOGO_URL.png" alt="Charter Communications Logo" class="company-logo charter" />
+    <div class="company-content">
+      <h4>Charter Communications – Senior Software Developer</h4>
+      <ul>
+        <li>Transformed monolithic Java apps into scalable Spring Boot microservices, reducing technical debt 50% and deployment cycles by 40%.</li>
+        <li>Implemented real-time event streaming with Kafka for billing and subscription workflows.</li>
+        <li>Built test coverage above 90% using JUnit 5, Mockito, Cucumber; enforced BDD practices.</li>
+        <li>Led containerization in Docker and Kubernetes/OpenShift for simplified environment management.</li>
+        <li>Designed and deployed secure OAuth2 and Spring Security based RBAC with Okta SSO integration.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HCL -->
+  <div class="company-card">
+    <img src="images/HCL_LOGO_URL.png" alt="HCL Technologies Logo" class="company-logo hcl" />
+    <div class="company-content">
+      <h4>HCL Technologies – Software Developer</h4>
+      <ul>
+        <li>Developed REST APIs and internal tools using Java 8, Spring MVC, and Hibernate for Telecom industry clients.</li>
+        <li>Built PL/SQL procedures and scheduled batch jobs to automate large-scale data workflows, recovering 20+ hours monthly.</li>
+        <li>Created frontend UIs using AngularJS and connected them securely to backend services.</li>
+        <li>Adopted design patterns (DAO, Factory, Singleton) for modular and maintainable code.</li>
+        <li>Used Jenkins CI, SOAP UI, and Git for automated builds, testing, and version control.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+   <section class="cert-section">
+  <h3>🏅 Certifications</h3>
+  <div class="cert-grid">
+    <div class="cert-item">
+      <img src="images/aws-badge.png" alt="AWS Certified Developer – Associate Badge" class="cert-badge" />
+      <div class="cert-details">
+        <h4>AWS Certified Developer – Associate</h4>
+        <p><strong>Issuer:</strong> Amazon Web Services</p>
+        <p><strong>Verification ID:</strong> DVA‑C02‑16CHARCODE1234</p>
+        <p class="cert-desc">
+          Demonstrates ability to design, deploy, and debug cloud-based applications on AWS. Credential valid until 2028.
+        </p>
+        <a href="https://www.credly.com/earner/dashboard" target="_blank" class="credly-link">
+          <img src="images/credly-logo.svg" alt="View on Credly" class="credly-logo" />
+          <span>View on Credly</span>
+        </a>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="company-card">
-        <img src="images/ventois_logo.png" alt="Ventois Logo" class="company-logo" />
-        <div class="company-content">
-          <h4>Ventois Inc.</h4>
-          <ul>
-            <li>Led backend microservices development on AWS using Spring Boot and Lambda.</li>
-            <li>Designed scalable APIs with API Gateway and DynamoDB.</li>
-            <li>Used Jenkins & GitHub Actions for CI/CD pipelines.</li>
-            <li>Mentored junior developers and improved code quality with TDD practices.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="company-card">
-        <img src="images/hcl_logo.png" alt="HCL Technologies Logo" class="company-logo" />
-        <div class="company-content">
-          <h4>HCL Technologies</h4>
-          <ul>
-            <li>Built web applications using Java, JSP, Servlets, and Oracle PL/SQL.</li>
-            <li>Created XSLT transforms and frontend workflows with ReactJS.</li>
-            <li>Supported legacy monolithic apps migration to microservices.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
     <section class="education-section">
-      <h3>Education</h3>
+  <h3>Education</h3>
+  <div class="edu-card">
+    <img src="images/FITCHBURG_LOGO_URL.jpg" alt="Fitchburg State University Logo" class="edu-logo fitchburg" />
+    <div class="edu-content">
+      <h4>Master of Science in Computer Science</h4>
+      <p><strong>Institution:</strong> Fitchburg State University (MA, USA) | GPA: 3.91 / 4.0</p>
+      <p><strong>Key Subjects:</strong> Advanced Math for CS, Theory of Computation, Operating Systems & Networking, Practice of Programming, Object-Oriented Programming, Design & Analysis of Algorithms, Advanced Programming, Object-Oriented Design & Analysis, Data Mining & Predictive Analysis, Database Design</p>
+    </div>
+  </div>
 
-      <div class="edu-card">
-        <img src="images/fitchburg_state_logo.png" alt="Fitchburg State University" class="edu-logo" />
-        <div class="edu-content">
-          <h4>Master of Science in Computer Science</h4>
-          <p>Fitchburg State University, MA</p>
-          <p>Graduated 2019</p>
-        </div>
-      </div>
+  <div class="edu-card">
+    <img src="images/KARNATAK_LOGO_URL.jpg" alt="Karnataka University Dharwad Logo" class="edu-logo karnatak" />
+    <div class="edu-content">
+      <h4>Bachelor of Computer Applications</h4>
+      <p><strong>Institution:</strong> Karnataka University Dharwad (India) | Score: 8.80 / 10</p>
+      <p><strong>Focus Areas:</strong> Core computer applications, scripting, database fundamentals, programming logic and design, system basics, and application development</p>
+    </div>
+  </div>
+</section>
 
-      <div class="edu-card">
-        <img src="images/karnatak_university_logo.png" alt="Karnatak University" class="edu-logo" />
-        <div class="edu-content">
-          <h4>Bachelor of Science in Computer Science</h4>
-          <p>Karnatak University, India</p>
-          <p>Graduated 2014</p>
-        </div>
-      </div>
-    </section>
+  <section id="contact">
+  <div class="contact-container">
+    <h2>Let's Get In Touch!</h2>
+    <p>
+      I'm always open to new opportunities, collaborations, or just connecting — feel free to reach out! 🎬📖
+    </p>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Your full name" required />
 
-    <!-- Certification Section -->
-    <section id="certification" class="boxed-section">
-      <h3>Certifications</h3>
-      <div class="certifications">
-        <img src="images/aws_dev_associate_badge.png" alt="AWS Certified Developer - Associate Badge" />
-        <div class="cert-details">
-          <h4>AWS Certified Developer – Associate</h4>
-          <p><strong>Issuer:</strong> Amazon Web Services</p>
-          <p><strong>Valid:</strong> May 2023 – May 2026</p>
-          <p>Demonstrates expertise in developing, deploying, and debugging cloud applications on AWS.</p>
-          <a href="https://www.credly.com/badges/your-credential-link" target="_blank" rel="noopener" class="credly-link">
-            <img src="images/credly_logo.svg" alt="Credly Logo" class="credly-logo" />
-            View Credential on Credly
-          </a>
-        </div>
-      </div>
-    </section>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
 
-    <!-- Contact Form -->
-    <section id="contact">
-      <div class="contact-container">
-        <h2>Let's Get In Touch</h2>
-        <p>Feel free to reach out for collaborations or just a friendly chat.</p>
-        <form>
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="123-456-7890" />
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your email address" required />
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" placeholder="Say hello..." required></textarea>
 
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+      <button type="submit">Send Message 💌</button>
+    </form>
+  </div>
+</section>  
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </section>
-
+   
   </main>
 
   <footer>
-    &copy; 2025 Vidyarani Uppin. All rights reserved.
+    <p>&copy; 2025 Vidyarani Ishwar Uppin. All rights reserved.</p>
   </footer>
 
 </body>
