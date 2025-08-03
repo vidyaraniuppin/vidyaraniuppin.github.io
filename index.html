@@ -625,14 +625,26 @@
   color: #444;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+    .social-links a {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .social-links a:hover {
   transform: scale(1.2);
-  color: #0072b1; /* Default hover color (LinkedIn Blue) */
+}
+
+/* Platform-specific hover colors */
+.social-links i.fa-linkedin:hover {
+  color: #0077b5;
 }
 
 .social-links i.fa-github:hover {
-  color: #000;
+  color: #f5f5f5; /* Slight gray to contrast white */
 }
 
 .social-links i.fa-hackerrank:hover {
@@ -640,9 +652,8 @@
 }
 
 .social-links i.fa-code:hover {
-  color: #f89f1b;
+  color: #f89f1b; /* LeetCode orange */
 }
-
   </style>
 </head>
 <body>
