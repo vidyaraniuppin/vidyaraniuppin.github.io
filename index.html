@@ -845,35 +845,27 @@
   </footer>
 
   <script>
-  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const formData = {
-      name: document.getElementById('name').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      phone: document.getElementById('phone').value.trim(),
-      message: document.getElementById('message').value.trim(),
-    };
-
-    try {
-      const response = await fetch('https://your-backend-url.com/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        alert('✅ Your message has been sent successfully!');
-        document.getElementById('contactForm').reset();
+    fetch("/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value
+      })
+    }).then(res => {
+      if (res.ok) {
+        window.location.href = "/thank-you.html"; // or show message
       } else {
-        alert('❌ Failed to send message. Please try again.');
+        alert("Something went wrong. Please try again.");
       }
-    } catch (err) {
-      console.error(err);
-      alert('❌ An error occurred. Please try again later.');
-    }
+    });
   });
 </script>
 
