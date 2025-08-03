@@ -844,30 +844,5 @@
     <p>&copy; 2025 Vidyarani Ishwar Uppin. All rights reserved.</p>
   </footer>
 
-  <script>
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    fetch("/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        message: document.getElementById("message").value
-      })
-    }).then(res => {
-      if (res.ok) {
-        window.location.href = "thank-you.html"; // or show message
-      } else {
-        alert("Something went wrong. Please try again.");
-      }
-    });
-  });
-</script>
-
 </body>
 </html>
